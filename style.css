@@ -56,7 +56,7 @@ html {
     background-color: var(--bg-color); /* Change this to your desired color */
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
     body {
         position: absolute;
         left: 50%;
@@ -126,6 +126,13 @@ footer {
     min-height: 170px;
 }
 
+/* list */
+ul {
+    list-style-position: inside; 
+    padding: 0;
+}
+
+
 /* table stuff */
 table, td, th {
     border-collapse: collapse;
@@ -142,23 +149,17 @@ td {
 
 /* circle images */
 .circle-image-profile {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     overflow: hidden;
     float: right;
-    margin-left: 4%;
-    margin-bottom: 4%;
-    shape-outside: margin-box;
+    margin-left: 20px;
+    margin-bottom: 20px;
     
 }
 
-.circle-image-pedals {
-    width: 50px;
-    height: 100px;
-    /*border-radius: 50%;*/
-    overflow: hidden;
-}
+
 
 
 
@@ -166,13 +167,20 @@ td {
 .container {
     margin-top: 30px;
     display: grid;
-    grid-template-columns: 2fr 1fr; /* Equal width columns; adjust as needed */
-    grid-gap: 0px; /* Adjust gap between elements */
+    grid-template-columns: 1fr 120px; /* Equal width columns; adjust as needed */
+    /* Adjust gap between elements */
   }
 
 .right {
-    text-align: center;
     margin-top: 2.1em;
+    text-align: right;
+}
+
+.right img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
 }
   
 .container h3 {
@@ -185,7 +193,7 @@ td {
     grid-template-columns: 1fr; /* Single column for screens <= 600px */
   }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
     .intelligent-stack {
         grid-template-columns: repeat(2, 1fr); /* Two equally spaced columns */ 
     }
