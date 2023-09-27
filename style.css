@@ -85,6 +85,15 @@ a {
     height: 100%;
 }
 
+hr {
+    border: 0px; /* Set the border color */
+    background-color: var(--text-color); /* Set the background color to match the border color */
+    height: 2px; /* Set the height of the line */
+    margin: 10px 0; /* Adjust margin as needed */
+    padding: 0; /* Remove any padding */
+    border-style: none; /* Remove default border styles */
+}
+
 .sticky {
     position: sticky;
     /*
@@ -158,10 +167,6 @@ td {
     margin-bottom: 20px;
     
 }
-
-
-
-
 
 /* pedal dumb grid */
 .container {
