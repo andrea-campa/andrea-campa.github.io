@@ -1,13 +1,18 @@
+let playing = false;
+
 function preload() {
   dvd = loadImage('dvd_logo.png');
 }
 
 function setup() {
-  // mimics the autoplay policy
+  //mimics the autoplay policy
   getAudioContext().suspend();
 
-  let p5js_1 = createCanvas(500, 400);
-  p5js_1.parent('p5js_1');
+  createCanvas(windowWidth/1.5, windowHeight);
+  //let p5js_1 = createCanvas(500, 400);
+  //p5js_1.parent('p5js_1');
+
+  background(255, 204, 0);
 
   //scale
   cMajorScale = [261.63, 293.66, 349.23, 392.00];
@@ -30,7 +35,7 @@ function setup() {
 
   //amp env
   env = new p5.Env();
-  env.setADSR(0, 0.5, 0, 0); // Set attack, decay, sustain, release times
+  env.setADSR(0.005, 0.5, 0, 0); // Set attack, decay, sustain, release times
   env.setRange(0.8, 0); // Set the amplitude range (maximum and minimum)
 
   //delay
@@ -45,11 +50,13 @@ function setup() {
   
   x = 10;
   y = 10;
-  xspeed = 10;
-  yspeed = 10;
-  xdim = 100;
+  xspeed = 5;
+  yspeed = 5;
+  xdim = 150;
   ydim = 100;
-
+  r = floor(random(256));
+  g = floor(random(256));
+  b = floor(random(256));
 }
 
 function playsound() {
@@ -59,23 +66,22 @@ function playsound() {
   filter.freq(500);
   filter.res(20);
   distortion.process(osc, 0.01);
-  delay.process(distortion, 0.5, 0.2); //time in secs, feedback
-  //reverb.process(distortion, 5, 5); //Adjust the reverb time and decay rate 
+  delay.process(distortion, 0.4, 0.4); //time in secs, feedback
+  reverb.process(distortion, 5, 5); //Adjust the reverb time and decay rate 
 }
 
 function randomBackground() {
   // Generate random values for red, green, and blue components (0-255)
-  let r = floor(random(256));
-  let g = floor(random(256));
-  let b = floor(random(256));
+  r = floor(random(256));
+  g = floor(random(256));
+  b = floor(random(256));
 
   // Set the background color using the random values
-  background(r, g, b);
 }
 
 function draw() {
+  background(r, g, b);
   image(dvd, x, y, xdim, ydim);
-  
   x += xspeed;
   y += yspeed;
 
@@ -108,6 +114,13 @@ function draw() {
   }
 }
 
-function mousePressed() {
-  userStartAudio();
+function mouseClicked() {
+  if (playing) {
+    osc.stop() // Stop the oscillator by setting amplitude to 0
+    playing = false;
+  } else {
+    userStartAudio();
+    osc.start();
+    playing = true;
+  }
 }
