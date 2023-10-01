@@ -3,6 +3,9 @@ function preload() {
 }
 
 function setup() {
+  // mimics the autoplay policy
+  getAudioContext().suspend();
+
   let p5js_1 = createCanvas(500, 400);
   p5js_1.parent('p5js_1');
 
@@ -103,4 +106,8 @@ function draw() {
     randomBackground();    
     playsound();
   }
+}
+
+function mousePressed() {
+  userStartAudio();
 }
