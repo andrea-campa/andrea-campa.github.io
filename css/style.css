@@ -13,11 +13,14 @@
     }
 }
 
+
 canvas {
     display: block;
 }
-  
+
 body {
+    border: 2px solid var(--faint); 
+    margin: auto;
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: 'Tahoma', sans-serif;
@@ -25,6 +28,7 @@ body {
     font-size: 1em;
     padding: 3%;
     transition: color 0.5s ease;
+    position: relative;
 }
 
 h1 {
@@ -62,10 +66,8 @@ html {
 
 @media screen and (min-width: 800px) {
     body {
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, 0%);
-        max-width: 700px;
+        margin: auto;
+        max-width: 600px;
     }
     html {
         background-color: var(--bg-color); /* Change this to your desired color */
@@ -110,8 +112,6 @@ hr {
     z-index: 1;
     background: var(--bg-color);
     top: 0;
-    right: 0;
-    bottom: 0;
     left: 0;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -225,5 +225,18 @@ td {
     width: 100%;
     height: 100%;
 }
+
+/* arrow */
+
+.bouncing-arrow {
+    position: absolute;
+    display: block;
+    max-width: inherit;
+    transition: all 1s;
+    font-size: 2em;
+}
+
+
+
 
 
