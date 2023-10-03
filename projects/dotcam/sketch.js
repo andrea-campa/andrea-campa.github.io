@@ -48,7 +48,7 @@ function draw() {
       var radius = stepSize * darkness;
       var xmap = map(x,0,webcam.width,0, width);
       var ymap = map(y,0,webcam.height,0, height);
-      square(xmap, ymap, radius);
+      square(width-xmap, ymap, radius);
     }
   }
 }
