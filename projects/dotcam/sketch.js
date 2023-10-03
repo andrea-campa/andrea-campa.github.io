@@ -7,35 +7,11 @@ function setup() {
   }
   myCanvas.parent("canvas-container");
 
-  const bodyID = document.getElementById("canvas-container");
-  const arrowID = document.getElementById("arrow-nav");
-  if (windowWidth>windowHeight) {
-    bodyID.style.top = (windowHeight - windowHeight/1.3) / 2 + "px";
-    bodyID.style.left = (windowWidth - windowHeight/1.3) / 2 + "px";
-    //arrowID.style.top = 100 + "px";
-    //arrowID.style.left = 100+ "px";
-  } else { 
-    bodyID.style.top = (windowHeight - windowWidth) / 2 + "px";
-    bodyID.style.left = (windowWidth - windowWidth) / 2 + "px";
-  }
-
   webcam = createCapture(VIDEO);
 	webcam.hide();
-
 }
 
 function draw() {
-  /* background(255);
-  webcam.loadPixels();
-  
-  for (var y=0; y<=640; y+=stepSize) {
-    for (var x=0; x<=540; x+=stepSize) {
-      var i = y * width + x;
-      var darkness = (255 - webcam.pixels[i*4]) / 255;
-      var radius = stepSize * darkness;
-      square(x, y, radius);
-    }
-  } */
 
   background(0);
   webcam.loadPixels();

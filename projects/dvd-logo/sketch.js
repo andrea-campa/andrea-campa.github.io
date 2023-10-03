@@ -15,18 +15,6 @@ function setup() {
   }
   myCanvas.parent("canvas-container");
 
-  const bodyID = document.getElementById("canvas-container");
-  const arrowID = document.getElementById("arrow-nav");
-  if (windowWidth>windowHeight) {
-    bodyID.style.top = (windowHeight - windowHeight/1.3) / 2 + "px";
-    bodyID.style.left = (windowWidth - windowHeight/1.3) / 2 + "px";
-    //arrowID.style.top = 100 + "px";
-    //arrowID.style.left = 100+ "px";
-  } else { 
-    bodyID.style.top = (windowHeight - windowWidth) / 2 + "px";
-    bodyID.style.left = (windowWidth - windowWidth) / 2 + "px";
-  }
-
   background(255, 204, 0);
 
   //scale
