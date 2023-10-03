@@ -8,9 +8,24 @@ function setup() {
   //mimics the autoplay policy
   getAudioContext().suspend();
 
-  createCanvas(windowWidth/1.5, windowHeight);
-  //let p5js_1 = createCanvas(500, 400);
-  //p5js_1.parent('p5js_1');
+  if (windowWidth>windowHeight) {
+    var myCanvas = createCanvas(windowHeight/1.3, windowHeight/1.3);
+  } else { 
+    var myCanvas = createCanvas(windowWidth, windowWidth);
+  }
+  myCanvas.parent("canvas-container");
+
+  const bodyID = document.getElementById("canvas-container");
+  const arrowID = document.getElementById("arrow-nav");
+  if (windowWidth>windowHeight) {
+    bodyID.style.top = (windowHeight - windowHeight/1.3) / 2 + "px";
+    bodyID.style.left = (windowWidth - windowHeight/1.3) / 2 + "px";
+    //arrowID.style.top = 100 + "px";
+    //arrowID.style.left = 100+ "px";
+  } else { 
+    bodyID.style.top = (windowHeight - windowWidth) / 2 + "px";
+    bodyID.style.left = (windowWidth - windowWidth) / 2 + "px";
+  }
 
   background(255, 204, 0);
 
@@ -50,10 +65,19 @@ function setup() {
   
   x = 10;
   y = 10;
-  xspeed = 5;
-  yspeed = 5;
-  xdim = 150;
-  ydim = 100;
+  if (windowWidth>windowHeight) {
+    xspeed = windowHeight/150;
+    yspeed = windowHeight/150;
+    xdim = windowHeight/6;
+    ydim = windowHeight/8;
+  } else { 
+    xspeed = windowWidth/150;
+    yspeed = windowWidth/150;
+    xdim = windowWidth/5;
+    ydim = windowWidth/6.5;
+  }
+  
+  
   r = floor(random(256));
   g = floor(random(256));
   b = floor(random(256));

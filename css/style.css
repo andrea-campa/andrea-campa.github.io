@@ -19,12 +19,12 @@ canvas {
 }
 
 body {
-    border: 2px solid var(--faint); 
     margin: auto;
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: 'Tahoma', sans-serif;
     min-width: 300px;
+    max-width: 600px;
     font-size: 1em;
     padding: 3%;
     transition: color 0.5s ease;
@@ -66,8 +66,10 @@ html {
 
 @media screen and (min-width: 800px) {
     body {
+        border: 2px solid var(--faint); 
         margin: auto;
         max-width: 600px;
+        
     }
     html {
         background-color: var(--bg-color); /* Change this to your desired color */

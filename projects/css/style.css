@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  border: none;
+  background: none;
+  margin: 1em;
+  /*text-transform: uppercase*/
+  font-size: 1.5em;
+}
+
+.arrow {
+  color: white;
+}
+
+h1 {
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+#arrow-nav {
+  position: absolute;
+  bottom: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#canvas-container {
+  position: absolute;
+  overflow: hidden;
+}
+  
