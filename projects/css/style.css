@@ -10,9 +10,15 @@ body {
 a {
   border: none;
   background: none;
-  margin: 1em;
+  margin: 0.5em;
   /*text-transform: uppercase*/
   font-size: 1.5em;
+}
+
+@media only screen and (min-aspect-ratio: 1.1/1) {
+  a {
+    margin: 1em;
+  }
 }
 
 .arrow {
