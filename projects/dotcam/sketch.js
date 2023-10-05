@@ -5,9 +5,14 @@ function setup() {
   } else { 
     var myCanvas = createCanvas(round(windowWidth), round(windowWidth));
   }
-  myCanvas.parent("canvas-container");
-
+  pixelDensity(1);
   webcam = createCapture(VIDEO);
+  if (windowWidth>windowHeight) {
+    webcam.size(windowHeight/1.3,windowHeight/1.3)
+  } else { 
+    webcam.size(windowWidth,windowWidth)
+  }
+  myCanvas.parent("canvas-container");
 	webcam.hide();
 }
 
@@ -22,9 +27,10 @@ function draw() {
       var i = y * webcam.width + x;
       var darkness = (255 - webcam.pixels[i*4]) / 255;
       var radius = stepSize * darkness;
-      var xmap = map(x,0,webcam.width,0, width);
+      /* var xmap = map(x,0,webcam.width,0, width);
       var ymap = map(y,0,webcam.height,0, height);
-      square(width-xmap, ymap, radius);
+      square(width-xmap, ymap, radius); */
+      square(width-x, y, radius); 
     }
   }
 }
