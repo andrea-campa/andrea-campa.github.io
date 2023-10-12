@@ -8,11 +8,11 @@ function navSpace () {
 };
 
 function arrowBuilder () {    
-    arrowID.style.top = viewportHeight - 50 + "px";
+    arrowID.style.top = viewportHeight - 70 + "px";
 };
 
 function arrowMove () {
-    arrowID.style.top = viewportHeight - 50 - i + "px";
+    arrowID.style.top = viewportHeight - 70 - i + "px";
   
     if (i<20) {
       i+=20;
@@ -21,7 +21,14 @@ function arrowMove () {
     }
   
     return 1;
-  }
+};
+
+window.addEventListener('scroll', () => {
+  arrowID.style.opacity = '0'; // Hide the div by setting its opacity to 0
+  setTimeout(() => {
+    arrowID.style.display = 'none'; // Optionally, hide the div completely by setting its display to 'none' after a brief delay
+  }, 500); // Adjust the delay (in milliseconds) as needed
+});
 
 navSpace();
 arrowBuilder();
