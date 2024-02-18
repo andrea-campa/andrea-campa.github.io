@@ -13,8 +13,8 @@
     
     <div id="top"></div>
     <nav id="nav-id">
-        <div class="titles">
-            <a onclick="changeColor()"><i class="fa-solid fa-lightbulb"></i></a>
+        <div class="titles no-sticky">
+            <!-- <a onclick="changeColor()"><i class="fa-solid fa-lightbulb"></i></a> -->
             <a href="#0"><h1>campa</h1></a>
             <a href="#1"><h1>sound design</h1></a>
             <a href="#2"><h1>coding</h1></a>
@@ -30,10 +30,10 @@
         <p style="color: yellow; font-style: italic;"> WARNING: some images and most text are still placeholders, website is under construction</p>
         -->
 
-        <div class="min-height page"> 
-            <h1 id="0" class="sticky titles">andrea campa <i class="fa-solid fa-user icons"></i></h1>
+        <div class="section"> 
+            <h1 id="0" class="titles be-sticky">andrea campa</h1>
             <p>
-                <img class="circle-image-profile" src="./assets/profile_pic.jpg" alt="Profile Picture">
+                <img class="profile-pic" src="./assets/profile_pic.jpg" alt="Profile Picture">
 
                 I'm a sound designer, coder and multi-instrumentalist based in Turin, Italy.<br><br>
                 Drawing inspiration from the world of fashion, design and architechture, I try to channel the creativity of these worlds into what i make.<br><br>
@@ -43,8 +43,8 @@
         </div>
 
         
-        <div class="page"> 
-            <h1 id="1" class="sticky titles">sound design <i class="fa-solid fa-flask icons"></i></h1>
+        <div class="section"> 
+            <h1 id="1" class="titles be-sticky">sound design</h1>
             <p>
                 I believe that sound is more than just noise: it's an integral part of storytelling, emotion, and immersion.
             </p>
@@ -73,10 +73,10 @@
             <p>
                 In this project I decided to rework fashion commercials by replacing their original soundtrack and sound design with my own.<br>
             </p>
-            <div class="container-16-9">
+            <div class="ratio-16-9">
                 <iframe src="https://www.youtube-nocookie.com/embed/UHFjxD2jJpQ?si=L9Dt5V3_m6p5oWSR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
-            <div class="container-16-9">
+            <div class="ratio-16-9">
                 <iframe src="https://www.youtube-nocookie.com/embed/vkbp-vn2tYM?si=yfvAd_v_xq_NGf7S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
 
@@ -95,8 +95,8 @@
             </p>          
         </div>
 
-        <div class="page">
-            <h1 id="2" class="sticky titles">coding <i class="fa-solid fa-terminal icons"></i></h1>
+        <div class="section">
+            <h1 id="2" class="titles be-sticky">coding</h1>
             
             <h2>P5.JS COLLECTION</h2>
             <p> 
@@ -128,10 +128,10 @@
                 and a filter for emulating the vintage sound of analog units.
             </p>
             <div class="intelligent-stack">
-                <div class="container-16-9">
+                <div class="ratio-16-9">
                     <img src="./assets/max4live/pingpong_1.jpg" alt="First Pic">
                 </div>
-                <div class="container-16-9">
+                <div class="ratio-16-9">
                     <img src="./assets/max4live/pingpong_2.jpg" alt="First Pic">
                 </div>
             </div>
@@ -147,10 +147,10 @@
                 <li>Buttons to trigger different time settings</li>
             </ul>
             <div class="intelligent-stack">
-                <div class="container-16-9">
+                <div class="ratio-16-9">
                     <img src="./assets/max4live/lfomod_1.jpg" alt="First Pic">
                 </div>
-                <div class="container-16-9">
+                <div class="ratio-16-9">
                     <img src="./assets/max4live/lfomod_2.jpg" alt="First Pic">
                 </div>
             </div>
@@ -158,14 +158,14 @@
         </div>
         
         
-        <div class="page"> 
-            <h1 id="3" class="sticky titles">hardware <i class="fa-solid fa-screwdriver-wrench icons"></i></h1>
+        <div class="section"> 
+            <h1 id="3" class="titles be-sticky">hardware</h1>
             <p>Here's a showcase of my hardware tinkering experiments, predominantly focused on guitar and synth pedals, with a touch of MIDI creations and various utility-driven audio devices.</p>
             <p>My hobby of building gear has been an awesome way to get my head around how signals and audio really work, all while making wild sounds</p>
             <p>Bear with me, I'm currently retaking the pictures.</p>
             
             <h2>GUITAR PEDALS</h2>
-            <div class="container">
+            <div class="hardware-card">
                 <div class="left">
                     <h3>60X BOOST (SUPER HARD ON CLONE)</h3>
                     <p>The Zvex Super Hard On is a compact, high-gain booster pedal known for its simplicity and incredible signal boost capabilities, providing a staggering 60 times increase in volume.</p>
@@ -178,7 +178,7 @@
 
             
 
-            <div class="container">
+            <div class="hardware-card">
                 <div class="left">
                     <h3>WEIRD FUZZ (FUZZ FACTORY CLONE)</h3>
                     <p>The Zvex Fuzz Factory is an iconic and versatile fuzz pedal renowned for its unique and experimental sound. It offers a wide range of chaotic sounds and wild sonic textures.</p>
@@ -189,7 +189,7 @@
             </div>
 
             <h2>SYNTH PEDALS</h2>
-            <div class="container">
+            <div class="hardware-card">
                 <div class="left">
                     <h3>TWO-VOICED SYNTH</h3>
                     <p>This drone pedal/synth has two knobs for pitch control of square wave oscillators, octave switches for extended tonal range, and a bypass switch to let through your original input signal. Fully designed and built by me.</p>
@@ -199,7 +199,7 @@
                 </div>
             </div>
 
-            <div class="container">
+            <div class="hardware-card">
                 <div class="left">
                     <h3>BOSS DD-3 ANALOG MOD</h3>
                     <p>I added a switch to toggle between standard repetitions and filtered ones, which emulate the warmer sound of bucket brigade delays like the EHX Memory Man.</p>
@@ -210,7 +210,7 @@
             </div>
 
             <h2>UTILITIES</h2>
-            <div class="container">
+            <div class="hardware-card">
                 <div class="left">
                     <h3>TRUE BYPASS LOOP</h3>
                     <p>This can be used to add true bypass to any effect linked to its send/return loop.</p>
@@ -220,7 +220,7 @@
                 </div>
             </div>
 
-            <div class="container">
+            <div class="hardware-card">
                 <div class="left">
                     <h3>EXPRESSION KNOB</h3>
                     <p>This one-knob pedal can be used to replace an expression pedal placed on a fixed position.</p>
@@ -232,7 +232,7 @@
             </div>
             
             <h2>MIDI</h2>
-            <div class="container">
+            <div class="hardware-card">
                 <div class="left">
                     <h3>DIN2USB MIDI HOST</h3>
                     <p>This device takes MIDI sent/received from the din connector and converts it to a usb signal. Built using <a href="https://www.hobbytronics.co.uk/" target="_blank"><u>hobbytronics</u></a> parts.</p>
@@ -244,8 +244,8 @@
         </div>
 
 
-        <div class="page"> 
-            <h1 id="4" class="sticky titles">contacts <i class="fa-solid fa-link icons"></i></h1>
+        <div class="section"> 
+            <h1 id="4" class="titles be-sticky">contacts</h1>
             <table>
                 <tr>
                     <td><i class="fa-solid fa-music"></i>&nbsp;</td>

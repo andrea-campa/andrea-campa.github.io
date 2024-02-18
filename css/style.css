@@ -1,244 +1,155 @@
-:root {
-    --bg-color: white;
-    --text-color: black;
-    --faint: rgb(52, 52, 52);
-    --mid-grey: #777777
-    --outside: rgb(19, 19, 20);
+/* @media (prefers-color-scheme: dark) {
+    $bg-color: black;
+    $text-color: white;
+} */
+html {
+  background-color: black;
 }
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg-color: black;
-        --text-color: white;
-    }
-}
-
-
-canvas {
-    display: block;
+@media screen and (min-width: 800px) {
+  html {
+    padding-top: 1%;
+  }
 }
 
 body {
+  margin: auto;
+  background-color: black;
+  color: white;
+  font-family: "Tahoma", sans-serif;
+  min-width: 300px;
+  max-width: 600px;
+  font-size: 1em;
+  padding: 3%;
+  transition: color 0.5s ease;
+  position: relative;
+}
+@media screen and (min-width: 800px) {
+  body {
+    border: 2px solid rgb(52, 52, 52);
     margin: auto;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: 'Tahoma', sans-serif;
-    min-width: 300px;
     max-width: 600px;
-    font-size: 1em;
-    padding: 3%;
-    transition: color 0.5s ease;
-    position: relative;
+  }
 }
 
 h1 {
-    font-family: 'Sen', sans-serif;
-    font-weight: normal;
-    text-transform: lowercase;
+  font-family: "Sen", sans-serif;
+  font-weight: normal;
+  text-transform: lowercase;
 }
 
-h2{
-    font-family: 'Tahona', sans-serif;
-    text-transform: uppercase;
-    font-size: 1.3em;
-    margin-top: 50px;
+h2 {
+  font-family: "Tahona", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  margin-top: 50px;
 }
 
-h3{
-    font-family: 'Tahona', sans-serif;
-    text-transform: uppercase;
-    font-size: 1em;
-    font-weight: bold;
-    margin-top: 30px;
-
+h3 {
+  font-family: "Tahona", sans-serif;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 30px;
 }
 
 .titles {
-    text-align: right;
-    font-size: 2em; /* Set font size to 16 pixels */
-    line-height: 0.3;
-    font-weight: bold;
+  text-align: right;
+  font-size: 2em;
+  line-height: 0.3;
+  font-weight: bold;
 }
-
-html {
-    background-color: var(--bg-color); /* Change this to your desired color */
+.titles.be-sticky {
+  position: sticky;
+  z-index: 1;
+  background: black;
+  top: 0;
+  left: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
-
-@media screen and (min-width: 800px) {
-    body {
-        border: 2px solid var(--faint); 
-        margin: auto;
-        max-width: 600px;
-        
-    }
-    html {
-        background-color: var(--bg-color); /* Change this to your desired color */
-        padding-top: 1%;
-    }
-}
-
 
 a {
-    color: inherit; /* Use the color of the parent element (usually black) */
-    text-decoration: none; /* Remove the underline */
+  color: inherit;
+  text-decoration: none;
 }
 
-.icons {
-    font-size: 0.7em;
-    display: none;
+ul {
+  list-style-position: inside;
+  padding: 0;
 }
 
-.ytplayer {
-    width: 100%;
-    height: 100%;
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
-hr {
-    border: 0px; /* Set the border color */
-    background-color: var(--text-color); /* Set the background color to match the border color */
-    height: 2px; /* Set the height of the line */
-    margin: 10px 0; /* Adjust margin as needed */
-    padding: 0; /* Remove any padding */
-    border-style: none; /* Remove default border styles */
+.hardware-card {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 120px;
+}
+.hardware-card .right {
+  margin-top: 2.1em;
+  text-align: right;
+}
+.hardware-card .right img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
-.sticky {
-    position: sticky;
-    /*
-    background: linear-gradient(to bottom, 
-        var(--bg-color) 0%,
-        var(--bg-color) 80%, 
-        transparent 100% 
-    );
-    */
-    z-index: 1;
-    background: var(--bg-color);
-    top: 0;
-    left: 0;
-    padding-top: 30px;
-    padding-bottom: 30px;
+.intelligent-stack {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media screen and (min-width: 800px) {
+  .intelligent-stack {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.spacer {
-    margin-bottom: 180px;
+.section {
+  padding-bottom: 4%;
 }
 
-.soundcloud {
-    margin-top: 3%;
-    text-align: center;
+.ratio-16-9 {
+  margin-top: 3%;
+  text-align: center;
+  position: relative;
+  width: 99%;
+  padding-bottom: 56.25%;
+  z-index: 0;
+}
+.ratio-16-9 iframe, .ratio-16-9 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bouncing-arrow {
+  position: absolute;
+  display: block;
+  max-width: inherit;
+  transition: all 1s;
+  font-size: 2em;
 }
 
 footer {
-    margin-top: 50px;
-    color: var(--faint)
+  margin-top: 50px;
+  color: rgb(52, 52, 52);
 }
-
-.page {
-    padding-bottom: 4%;
+footer table, footer td, footer th {
+  border-collapse: collapse;
+  border: none;
 }
-
-.min-height-right {
-    min-height: 170px;
-}
-
-/* list */
-ul {
-    list-style-position: inside; 
-    padding: 0;
-}
-
-
-/* table stuff */
-table, td, th {
-    border-collapse: collapse;
-    border: none;
-}
-
-table {
-    font-size: 1.2em;
-}
-
-td {
-    padding-top: 4%;
-}
-
-/* circle images */
-.circle-image-profile {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    overflow: hidden;
-    float: right;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    
-}
-
-/* pedal dumb grid */
-.container {
-    margin-top: 30px;
-    display: grid;
-    grid-template-columns: 1fr 120px; /* Equal width columns; adjust as needed */
-    /* Adjust gap between elements */
-  }
-
-.right {
-    margin-top: 2.1em;
-    text-align: right;
-}
-
-.right img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    overflow: hidden;
-}
-  
-.container h3 {
-    margin-top: 0px;
-}
-
-/* two image intelligent stacking */
-.intelligent-stack {
-    display: grid;
-    grid-template-columns: 1fr; /* Single column for screens <= 600px */
-  }
-
-@media screen and (min-width: 800px) {
-    .intelligent-stack {
-        grid-template-columns: repeat(2, 1fr); /* Two equally spaced columns */ 
-    }
-    }
-
-/* 16 by 9 definition*/
-.container-16-9 {
-    margin-top: 3%;
-    text-align: center;
-    position: relative;
-    width: 99%;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100%) */
-    z-index: 0;
-}
-
-.container-16-9 iframe , .container-16-9 img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-/* arrow */
-
-.bouncing-arrow {
-    position: absolute;
-    display: block;
-    max-width: inherit;
-    transition: all 1s;
-    font-size: 2em;
-}
-
-
-
-
-
+footer table {
+  font-size: 1.2em;
+}/*# sourceMappingURL=style.css.map */
