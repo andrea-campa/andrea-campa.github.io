@@ -8,11 +8,11 @@ function navSpace () {
 };
 
 function arrowBuilder () {    
-    arrowID.style.top = viewportHeight - 50 + "px";
+    arrowID.style.top = viewportHeight - 100 + "px";
 };
 
 function arrowMove () {
-    arrowID.style.top = viewportHeight - 50 - i + "px";
+    arrowID.style.top = viewportHeight - 100 - i + "px";
   
     if (i<20) {
       i+=20;
