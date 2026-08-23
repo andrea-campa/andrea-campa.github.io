@@ -160,6 +160,37 @@ ul {
   }
 }
 
+/* Instagram embed beside a photo, both matched to the same height. */
+.ina-stack {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 3%;
+
+  & .instagram-media {
+    margin: 0 !important;
+    min-width: 0 !important;
+    width: 100% !important;
+  }
+
+  & .img-cell img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 1 / 1; /* square when stacked on mobile */
+  }
+
+  @media screen and (min-width: 620px) {
+    grid-template-columns: minmax(326px, 1fr) 1fr;
+    align-items: stretch;
+
+    & .img-cell img {
+      height: 100%;
+      aspect-ratio: auto; /* match the embed's height instead */
+    }
+  }
+}
+
 /* Other */
 .section {
   padding-bottom: 4%;
