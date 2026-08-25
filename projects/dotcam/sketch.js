@@ -1,36 +1,34 @@
+let webcam;
 
 function setup() {
-  if (windowWidth>windowHeight) {
-    var myCanvas = createCanvas(round(windowHeight/1.3), round(windowHeight/1.3));
-  } else { 
-    var myCanvas = createCanvas(round(windowWidth), round(windowWidth));
-  }
+  const size = makeSquareCanvas();
   pixelDensity(1);
-  webcam = createCapture(VIDEO);
-  if (windowWidth>windowHeight) {
-    webcam.size(windowHeight/1.3,windowHeight/1.3)
-  } else { 
-    webcam.size(windowWidth,windowWidth)
-  }
-  myCanvas.parent("canvas-container");
-	webcam.hide();
+  webcam = createCapture(VIDEO, () => {
+    const hint = document.getElementById('cam-hint');
+    if (hint) hint.style.display = 'none';
+  });
+  webcam.size(size, size);
+  webcam.hide();
 }
 
 function draw() {
-
   background(0);
   webcam.loadPixels();
-  var stepSize = 15;
+  if (webcam.pixels.length === 0) return;
 
-  for (var y=0; y<=webcam.height; y+=stepSize) {
-    for (var x=0; x<=webcam.width; x+=stepSize) {
-      var i = y * webcam.width + x;
-      var darkness = (255 - webcam.pixels[i*4]) / 255;
-      var radius = stepSize * darkness;
-      /* var xmap = map(x,0,webcam.width,0, width);
-      var ymap = map(y,0,webcam.height,0, height);
-      square(width-xmap, ymap, radius); */
-      square(width-x, y, radius); 
+  const stepSize = 15;
+  for (let y = 0; y <= webcam.height; y += stepSize) {
+    for (let x = 0; x <= webcam.width; x += stepSize) {
+      const i = y * webcam.width + x;
+      const darkness = (255 - webcam.pixels[i * 4]) / 255;
+      const radius = stepSize * darkness;
+      square(width - x, y, radius); // mirror horizontally
     }
   }
+}
+
+function windowResized() {
+  const size = squareSize();
+  resizeCanvas(size, size);
+  webcam.size(size, size);
 }
