@@ -2,302 +2,502 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>andrea campa</title>
+    <meta name="theme-color" content="#1f1f1f">
     <link rel="icon" href="./assets/icon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script>
+        // Apply the saved theme before first paint so there is no flash.
+        document.documentElement.classList.add('js');
+        try {
+            if (localStorage.getItem('theme') === 'light') document.documentElement.dataset.theme = 'light';
+        } catch (e) {}
+    </script>
+    <script src="./js/main.js" defer></script>
 </head>
 <body>
-    
-    <div id="top"></div>
-    <nav id="nav-id">
-        <div class="titles no-sticky">
-            <!-- <a onclick="changeColor()"><i class="fa-solid fa-lightbulb"></i></a> -->
-            <a href="#0"><h1>@campa</h1></a>
-            <a href="#1"><h1>sound design</h1></a>
-            <a href="#2"><h1>@inarushhhh</h1></a>
-            <a href="#3"><h1>coding</h1></a>
-            <a href="#4"><h1>hardware</h1></a>
-            <a href="#5"><h1>contacts</h1></a>
+
+    <a class="skip-link" href="#main">skip to content</a>
+
+    <!-- Dot-grid canvas the page sits on; the glow follows the pointer. -->
+    <div class="backdrop" aria-hidden="true"><div class="backdrop-glow"></div></div>
+
+    <div class="frame" id="top">
+
+        <p class="frame-label" aria-hidden="true">
+            <span>andrea-campa.github.io / index</span>
+            <span class="frame-dims">800 &times; auto</span>
+        </p>
+
+        <header class="titlebar">
+            <h1 class="titlebar-name"><a href="#top">andrea campa</a></h1>
+            <p class="titlebar-role">sound designer / dj / coder</p>
+            <p class="titlebar-tc" aria-hidden="true">tc <span>------:--:--:--</span></p>
+        </header>
+
+        <nav class="hero" aria-label="Sections">
+            <ol class="rows hero-rows">
+                <li style="--i:0"><a class="row-link" href="#campa" aria-label="@campa"><span class="row-idx">01</span><span class="row-rule"></span><span class="row-label">@campa</span></a></li>
+                <li style="--i:1"><a class="row-link" href="#sound" aria-label="sound design"><span class="row-idx">02</span><span class="row-rule"></span><span class="row-label">sound design</span></a></li>
+                <li style="--i:2"><a class="row-link" href="#inarush" aria-label="@inarushhhh"><span class="row-idx">03</span><span class="row-rule"></span><span class="row-label">@inarushhhh</span></a></li>
+                <li style="--i:3"><a class="row-link" href="#coding" aria-label="coding"><span class="row-idx">04</span><span class="row-rule"></span><span class="row-label">coding</span></a></li>
+                <li style="--i:4"><a class="row-link" href="#hardware" aria-label="hardware"><span class="row-idx">05</span><span class="row-rule"></span><span class="row-label">hardware</span></a></li>
+                <li style="--i:5"><a class="row-link" href="#contacts" aria-label="contacts"><span class="row-idx">06</span><span class="row-rule"></span><span class="row-label">contacts</span></a></li>
+            </ol>
+            <div class="hero-foot">
+                <p><span class="keys">press <kbd>1</kbd>&ndash;<kbd>6</kbd> to jump</span><span class="hero-count no-keys">06 sections / 12 entries</span></p>
+                <a class="hero-scroll" href="#campa">scroll <svg class="icon" aria-hidden="true"><use href="#i-down"></use></svg></a>
+            </div>
+        </nav>
+
+        <main id="main">
+
+            <!-- 01 ============================================================ -->
+            <section class="section" id="campa" aria-labelledby="campa-title">
+                <header class="sec-head">
+                    <span class="sec-idx"><b>01</b>/06</span>
+                    <h2 class="sec-title" id="campa-title">@campa</h2>
+                </header>
+
+                <div class="entry">
+                    <div class="entry-meta">
+                        <span class="entry-idx">1.1</span>
+                        <span>about</span>
+                        <button class="portrait dither" type="button" data-zoom aria-label="Enlarge portrait">
+                            <img src="./assets/profile_pic.jpeg" alt="Portrait of Andrea Campa" width="1280" height="1280">
+                        </button>
+                    </div>
+                    <div class="entry-body">
+                        <p class="prompt"><span aria-hidden="true">&gt;</span><span class="prompt-cmd" data-type>whoami</span><span class="caret" aria-hidden="true"></span></p>
+                        <p class="lead">I'm a sound designer, DJ, coder and multi-instrumentalist based in Turin, Italy.</p>
+                        <p>Drawing inspiration from the world of fashion, design and architecture, I try to channel the creativity of these worlds into what I make.</p>
+                        <p>This website is part portfolio, part design project to gather my work.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 02 ============================================================ -->
+            <section class="section" id="sound" aria-labelledby="sound-title">
+                <header class="sec-head">
+                    <span class="sec-idx"><b>02</b>/06</span>
+                    <h2 class="sec-title" id="sound-title">sound design</h2>
+                </header>
+
+                <article class="entry">
+                    <div class="entry-meta">
+                        <span class="entry-idx">2.1</span>
+                        <span>playlist</span>
+                        <span>soundcloud</span>
+                    </div>
+                    <div class="entry-body">
+                        <h3>experimental sounds</h3>
+                        <p>A diverse collection of sounds that span field recordings, resampling and playing with synths.</p>
+                        <figure class="embed attn">
+                            <iframe title="SoundCloud playlist: sounds" height="450" loading="lazy" scrolling="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1760709834%3Fsecret_token%3Ds-LK1UkWchuyC&color=%231f1f1f&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                            <figcaption>
+                                <span><a href="https://soundcloud.com/iamcampa" target="_blank" rel="noopener">andrea campa</a> &middot; <a href="https://soundcloud.com/iamcampa/sets/sounds/s-LK1UkWchuyC" target="_blank" rel="noopener">sounds</a></span>
+                                <span>fig. 2.1</span>
+                            </figcaption>
+                        </figure>
+                        <p>A bit of context about my favorite pieces:</p>
+                        <dl class="tracklist">
+                            <div>
+                                <dt><span class="tl-n">01</span>madrid 2049</dt>
+                                <dd>A cyberpunk interpretation of the city's metro. It combines recordings taken during a 2015 trip and a futuristic setting.</dd>
+                            </div>
+                            <div>
+                                <dt><span class="tl-n">02</span>big place 1/2</dt>
+                                <dd>I stretched sounds hundreds of times their original length, creating sonic landscapes that feel like you're in an enormous space.</dd>
+                            </div>
+                            <div>
+                                <dt><span class="tl-n">03</span>modular birth</dt>
+                                <dd>A snippet from a modular synth masterclass I attended in 2019. I imagined what a digital birth might sound like.</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </article>
+
+                <article class="entry">
+                    <div class="entry-meta">
+                        <span class="entry-idx">2.2</span>
+                        <span>2 videos</span>
+                        <span>sound to picture</span>
+                    </div>
+                    <div class="entry-body">
+                        <h3>redesign</h3>
+                        <p>In this project I decided to rework fashion commercials by replacing their original soundtrack and sound design with my own.</p>
+                        <figure class="embed embed-video attn">
+                            <iframe title="Bottega Veneta SS23 sound redesign" loading="lazy" src="https://www.youtube-nocookie.com/embed/UHFjxD2jJpQ?si=L9Dt5V3_m6p5oWSR" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <figcaption><span>bottega veneta ss23 &mdash; sound redesign</span><span>fig. 2.2a</span></figcaption>
+                        </figure>
+                        <figure class="embed embed-video attn">
+                            <iframe title="Balenciaga AW23 sound redesign" loading="lazy" src="https://www.youtube-nocookie.com/embed/vkbp-vn2tYM?si=yfvAd_v_xq_NGf7S" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <figcaption><span>balenciaga aw23 &mdash; sound redesign</span><span>fig. 2.2b</span></figcaption>
+                        </figure>
+                    </div>
+                </article>
+
+                <article class="entry">
+                    <div class="entry-meta">
+                        <span class="entry-idx">2.3</span>
+                        <span>sound id</span>
+                        <span>2 tracks</span>
+                    </div>
+                    <div class="entry-body">
+                        <h3>sonic branding</h3>
+                        <p>A jingle tailored to the 2023 edition of FLOReal.</p>
+                        <figure class="embed attn">
+                            <iframe title="SoundCloud track: Floreal Sound ID" height="300" loading="lazy" scrolling="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1724476794%3Fsecret_token%3Ds-d7azr8SWD4R&color=%231f1f1f&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                            <figcaption>
+                                <span><a href="https://soundcloud.com/iamcampa" target="_blank" rel="noopener">andrea campa</a> &middot; <a href="https://soundcloud.com/iamcampa/floreal-jingle/s-d7azr8SWD4R" target="_blank" rel="noopener">floreal sound id</a></span>
+                                <span>fig. 2.3a</span>
+                            </figcaption>
+                        </figure>
+                        <p>I tried to imagine what the sonic branding for Museo Nazionale del Cinema would sound like.</p>
+                        <figure class="embed attn">
+                            <iframe title="SoundCloud track: Museo Del Cinema Sound ID" height="300" loading="lazy" scrolling="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1724475366%3Fsecret_token%3Ds-aZXJUAlAELU&color=%231f1f1f&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                            <figcaption>
+                                <span><a href="https://soundcloud.com/iamcampa" target="_blank" rel="noopener">andrea campa</a> &middot; <a href="https://soundcloud.com/iamcampa/museo-del-cinema-sonic-branding/s-aZXJUAlAELU" target="_blank" rel="noopener">museo del cinema sound id</a></span>
+                                <span>fig. 2.3b</span>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </article>
+            </section>
+
+            <!-- 03 ============================================================ -->
+            <section class="section" id="inarush" aria-labelledby="inarush-title">
+                <header class="sec-head">
+                    <span class="sec-idx"><b>03</b>/06</span>
+                    <h2 class="sec-title" id="inarush-title">@inarushhhh</h2>
+                </header>
+
+                <div class="marquee" aria-label="Highlights">
+                    <div class="marquee-track">
+                        <ul class="marquee-list">
+                            <li>resident at amor&#601;</li>
+                            <li>hypergroove season &mdash; wired productions</li>
+                            <li>lipstick</li>
+                            <li>out on bounce vision records</li>
+                            <li>out on angels gun club</li>
+                            <li>played at verknipt</li>
+                            <li>support from adrian mills, cloudy, human error</li>
+                        </ul>
+                        <ul class="marquee-list" aria-hidden="true">
+                            <li>resident at amor&#601;</li>
+                            <li>hypergroove season &mdash; wired productions</li>
+                            <li>lipstick</li>
+                            <li>out on bounce vision records</li>
+                            <li>out on angels gun club</li>
+                            <li>played at verknipt</li>
+                            <li>support from adrian mills, cloudy, human error</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <article class="entry">
+                    <div class="entry-meta">
+                        <span class="entry-idx">3.1</span>
+                        <span>dj / producer</span>
+                        <span>bounce</span>
+                        <span>latincore</span>
+                    </div>
+                    <div class="entry-body">
+                        <h3>club music alias</h3>
+                        <p class="lead"><b>INA RUSH</b> is the alias I DJ and produce club music under. Upbeat bass, latin tek and seductive vocals, all tied into an eclectic style.</p>
+                        <p>I'm a resident at <a href="https://www.instagram.com/amoreeeeeeeeeeeeeeeeeee/" target="_blank" rel="noopener">amor&#601;</a>, Turin's largest queer clubbing event. Before that came a residency in <a href="https://www.instagram.com/wired.prd/" target="_blank" rel="noopener">Wired Productions</a>' Hypergroove season, playing alongside international guests, and a run at <b>Lipstick</b>, a party built around the Italian scene.</p>
+                        <p>My music has landed on two labels: <a href="https://www.instagram.com/bouncevision.records/" target="_blank" rel="noopener">Bounce Vision Records</a> (bounce) and <a href="https://www.instagram.com/angelsrecs/" target="_blank" rel="noopener">Angels Gun Club</a> (latincore).</p>
+                        <p>Some tracks have been played across the international hard bounce/trance movement, reaching the widely recognized <a href="https://www.instagram.com/verkniptevents/" target="_blank" rel="noopener">verknipt</a> event, with support from <a href="https://www.instagram.com/240kmh/" target="_blank" rel="noopener">240kmh</a> collective members like <b>Adrian Mills</b>, <b>Cloudy</b> and <b>Human Error</b>.</p>
+
+                        <figure class="embed attn">
+                            <iframe title="SoundCloud: ina rush" height="450" loading="lazy" scrolling="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?visual=true&url=https%3A%2F%2Fapi.soundcloud.com%2Fusers%2F1140680446&show_artwork=true&color=%231f1f1f"></iframe>
+                            <figcaption>
+                                <span><a href="https://soundcloud.com/inarushhhh" target="_blank" rel="noopener">soundcloud.com/inarushhhh</a></span>
+                                <span>fig. 3.1a</span>
+                            </figcaption>
+                        </figure>
+
+                        <div class="ina-stack">
+                            <div class="embed-cell attn">
+                                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DWRo6vwjAYt/" data-instgrm-version="14">
+                                    <a href="https://www.instagram.com/p/DWRo6vwjAYt/" target="_blank" rel="noopener">View this post on Instagram</a>
+                                </blockquote>
+                            </div>
+                            <button class="img-cell dither" type="button" data-zoom aria-label="Enlarge photo: ina rush studio portrait">
+                                <img src="./assets/ina/ina2.jpg" alt="ina rush studio portrait" loading="lazy" width="855" height="855">
+                            </button>
+                        </div>
+                        <script async src="https://www.instagram.com/embed.js"></script>
+                    </div>
+                </article>
+            </section>
+
+            <!-- 04 ============================================================ -->
+            <section class="section" id="coding" aria-labelledby="coding-title">
+                <header class="sec-head">
+                    <span class="sec-idx"><b>04</b>/06</span>
+                    <h2 class="sec-title" id="coding-title">coding</h2>
+                </header>
+
+                <article class="entry">
+                    <div class="entry-meta">
+                        <span class="entry-idx">4.1</span>
+                        <span>4 sketches</span>
+                        <span>javascript</span>
+                    </div>
+                    <div class="entry-body">
+                        <h3>p5.js collection</h3>
+                        <p>p5.js is a javascript creative coding library. I use it to generate and process audio/video content.</p>
+                        <ol class="index-list">
+                            <li><a href="./projects/dvd-logo/"><span class="il-n">01</span><span class="il-name">dvd logo synth</span><span class="il-desc">every bounce plays a note</span><span class="il-tag">sound</span></a></li>
+                            <li><a href="./projects/dotcam/"><span class="il-n">02</span><span class="il-name">dotcam</span><span class="il-desc">your webcam as squares, dots or ascii</span><span class="il-tag">camera</span></a></li>
+                            <li><a href="./projects/noiseballs/"><span class="il-n">03</span><span class="il-name">noiseballs</span><span class="il-desc">dots drifting on perlin noise</span><span class="il-tag"></span></a></li>
+                            <li><a href="./projects/glitchcam/"><span class="il-n">04</span><span class="il-name">glitchcam</span><span class="il-desc">mirrored, inverted webcam stripes</span><span class="il-tag">camera</span></a></li>
+                        </ol>
+                    </div>
+                </article>
+
+                <article class="entry">
+                    <div class="entry-meta">
+                        <span class="entry-idx">4.2</span>
+                        <span>2 devices</span>
+                        <span>ableton live</span>
+                    </div>
+                    <div class="entry-body">
+                        <h3>max for live</h3>
+                        <p><a href="https://www.ableton.com/en/live/max-for-live/" target="_blank" rel="noopener">Max for Live</a> is a software platform that integrates visual programming with Ableton Live.</p>
+                        <p>It allows the user to create <b>audio</b> and <b>midi</b> devices, but also extends to <b>video</b> processing and <b>real-world</b> integration, making it extremely versatile for creating mixed-media art that combines audio, video, and physical elements.</p>
+                        <p>These are some of my M4L devices:</p>
+
+                        <div class="device">
+                            <h4><span class="device-n">a</span>creative delay</h4>
+                            <p>This device offers four delay types, plus a filter for emulating the vintage sound of analog units:</p>
+                            <ul class="spec">
+                                <li>Stereo</li>
+                                <li>Standard Ping Pong</li>
+                                <li>Narrowing Stereo</li>
+                                <li>Expanding Ping Pong</li>
+                            </ul>
+                            <div class="gallery">
+                                <button class="shot" type="button" data-zoom><img class="attn" src="./assets/max4live/pingpong_1.jpeg" alt="Creative Delay Max for Live device, view 1" loading="lazy" width="1280" height="720"></button>
+                                <button class="shot" type="button" data-zoom><img class="attn" src="./assets/max4live/pingpong_2.jpeg" alt="Creative Delay Max for Live device, view 2" loading="lazy" width="1280" height="720"></button>
+                            </div>
+                        </div>
+
+                        <div class="device">
+                            <h4><span class="device-n">b</span>modded lfo</h4>
+                            <p>I modded the stock M4L LFO by adding new functionality while preserving most of its original code. Now it features:</p>
+                            <ul class="spec">
+                                <li>Musical Subdivision Frequency</li>
+                                <li>Ramp Time for smooth transitions</li>
+                                <li>Buttons to trigger different time settings</li>
+                            </ul>
+                            <div class="gallery">
+                                <button class="shot" type="button" data-zoom><img class="attn" src="./assets/max4live/lfomod_1.jpeg" alt="Modded LFO Max for Live device, view 1" loading="lazy" width="1280" height="720"></button>
+                                <button class="shot" type="button" data-zoom><img class="attn" src="./assets/max4live/lfomod_2.jpeg" alt="Modded LFO Max for Live device, view 2" loading="lazy" width="1280" height="720"></button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- 05 ============================================================ -->
+            <section class="section" id="hardware" aria-labelledby="hardware-title">
+                <header class="sec-head">
+                    <span class="sec-idx"><b>05</b>/06</span>
+                    <h2 class="sec-title" id="hardware-title">hardware</h2>
+                </header>
+
+                <article class="entry">
+                    <div class="entry-meta">
+                        <span class="entry-idx">5.1</span>
+                        <span>diy</span>
+                        <span>7 builds</span>
+                    </div>
+                    <div class="entry-body">
+                        <h3>tinkering</h3>
+                        <p>Here's a showcase of my hardware tinkering experiments, predominantly focused on guitar and synth pedals, with a touch of MIDI creations and various utility-driven audio devices.</p>
+                        <p>My hobby of building gear has been an awesome way to get my head around how signals and audio really work, all while making wild sounds.</p>
+                    </div>
+                </article>
+
+                <article class="entry">
+                    <div class="entry-meta">
+                        <span class="entry-idx">5.2</span>
+                        <span>2 builds</span>
+                    </div>
+                    <div class="entry-body">
+                        <h3>guitar pedals</h3>
+                        <ul class="catalog">
+                            <li class="item">
+                                <div class="item-text">
+                                    <h4>60x boost</h4>
+                                    <p class="item-sub">super hard on clone</p>
+                                    <p>The Zvex Super Hard On is a compact, high-gain booster pedal known for its simplicity and incredible signal boost capabilities, providing a staggering 60 times increase in volume.</p>
+                                </div>
+                                <button class="item-thumb dither" type="button" data-zoom aria-label="Enlarge photo: 60x boost">
+                                    <img src="./assets/pedals/booster.jpeg" alt="60X Boost booster pedal (Super Hard On clone)" loading="lazy" width="300" height="300">
+                                </button>
+                            </li>
+                            <li class="item">
+                                <div class="item-text">
+                                    <h4>weird fuzz</h4>
+                                    <p class="item-sub">fuzz factory clone</p>
+                                    <p>The Zvex Fuzz Factory is an iconic and versatile fuzz pedal renowned for its unique and experimental sound. It offers a wide range of chaotic sounds and wild sonic textures.</p>
+                                </div>
+                                <button class="item-thumb dither" type="button" data-zoom aria-label="Enlarge photo: weird fuzz">
+                                    <img src="./assets/pedals/factory.jpeg" alt="Weird Fuzz pedal (Fuzz Factory clone)" loading="lazy" width="300" height="300">
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="entry">
+                    <div class="entry-meta">
+                        <span class="entry-idx">5.3</span>
+                        <span>2 builds</span>
+                    </div>
+                    <div class="entry-body">
+                        <h3>synth pedals</h3>
+                        <ul class="catalog">
+                            <li class="item">
+                                <div class="item-text">
+                                    <h4>two-voiced synth</h4>
+                                    <p class="item-sub">original design</p>
+                                    <p>This drone pedal/synth has two knobs for pitch control of square wave oscillators, octave switches for extended tonal range, and a bypass switch to let through your original input signal. Fully designed and built by me.</p>
+                                </div>
+                                <button class="item-thumb dither" type="button" data-zoom aria-label="Enlarge photo: two-voiced synth">
+                                    <img src="./assets/pedals/2voiced.jpeg" alt="Two-voiced drone synth pedal" loading="lazy" width="320" height="320">
+                                </button>
+                            </li>
+                            <li class="item">
+                                <div class="item-text">
+                                    <h4>boss dd-3 analog mod</h4>
+                                    <p class="item-sub">delay mod</p>
+                                    <p>I added a switch to toggle between standard repetitions and filtered ones, which emulate the warmer sound of bucket brigade delays like the EHX Memory Man.</p>
+                                </div>
+                                <button class="item-thumb dither" type="button" data-zoom aria-label="Enlarge photo: Boss DD-3 analog mod">
+                                    <img src="./assets/pedals/dd3.jpeg" alt="Boss DD-3 delay with analog mod switch" loading="lazy" width="320" height="320">
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="entry">
+                    <div class="entry-meta">
+                        <span class="entry-idx">5.4</span>
+                        <span>2 builds</span>
+                    </div>
+                    <div class="entry-body">
+                        <h3>utilities</h3>
+                        <ul class="catalog">
+                            <li class="item">
+                                <div class="item-text">
+                                    <h4>true bypass loop</h4>
+                                    <p class="item-sub">send / return loop</p>
+                                    <p>This can be used to add true bypass to any effect linked to its send/return loop.</p>
+                                </div>
+                                <button class="item-thumb dither" type="button" data-zoom aria-label="Enlarge photo: true bypass loop">
+                                    <img src="./assets/pedals/bypass.jpeg" alt="True bypass loop utility pedal" loading="lazy" width="300" height="300">
+                                </button>
+                            </li>
+                            <li class="item">
+                                <div class="item-text">
+                                    <h4>expression knob</h4>
+                                    <p class="item-sub">expression pedal replacement</p>
+                                    <p>This one-knob pedal can be used to replace an expression pedal placed on a fixed position.</p>
+                                    <p>By toggling it on and off, you can seamlessly switch between two preset values, effectively adding preset functionality to compatible hardware.</p>
+                                </div>
+                                <button class="item-thumb dither" type="button" data-zoom aria-label="Enlarge photo: expression knob">
+                                    <img src="./assets/pedals/expressionknob.jpeg" alt="Expression knob pedal" loading="lazy" width="320" height="320">
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="entry">
+                    <div class="entry-meta">
+                        <span class="entry-idx">5.5</span>
+                        <span>1 build</span>
+                    </div>
+                    <div class="entry-body">
+                        <h3>midi</h3>
+                        <ul class="catalog">
+                            <li class="item">
+                                <div class="item-text">
+                                    <h4>din2usb midi host</h4>
+                                    <p class="item-sub">din to usb converter</p>
+                                    <p>This device takes MIDI sent/received from the din connector and converts it to a usb signal. Built using <a href="https://www.hobbytronics.co.uk/" target="_blank" rel="noopener">hobbytronics</a> parts.</p>
+                                </div>
+                                <button class="item-thumb dither" type="button" data-zoom aria-label="Enlarge photo: DIN2USB MIDI host">
+                                    <img src="./assets/pedals/midi2usb.jpeg" alt="DIN2USB MIDI host device" loading="lazy" width="320" height="320">
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+
+            <!-- 06 ============================================================ -->
+            <section class="section" id="contacts" aria-labelledby="contacts-title">
+                <header class="sec-head">
+                    <span class="sec-idx"><b>06</b>/06</span>
+                    <h2 class="sec-title" id="contacts-title">contacts</h2>
+                </header>
+
+                <ul class="rows contact-rows">
+                    <li><a class="row-link" href="https://soundcloud.com/inarushhhh" target="_blank" rel="noopener"><span class="row-idx">dj<br>/inarushhhh</span><span class="row-rule"></span><span class="row-label">soundcloud<svg class="icon" aria-hidden="true"><use href="#i-ne"></use></svg></span></a></li>
+                    <li><a class="row-link" href="https://www.instagram.com/andreacampa_" target="_blank" rel="noopener"><span class="row-idx">personal<br>@andreacampa_</span><span class="row-rule"></span><span class="row-label">instagram<svg class="icon" aria-hidden="true"><use href="#i-ne"></use></svg></span></a></li>
+                    <li><a class="row-link" href="https://www.instagram.com/inarushhhh" target="_blank" rel="noopener"><span class="row-idx">dj<br>@inarushhhh</span><span class="row-rule"></span><span class="row-label">instagram<svg class="icon" aria-hidden="true"><use href="#i-ne"></use></svg></span></a></li>
+                    <li><a class="row-link" href="https://github.com/andrea-campa" target="_blank" rel="noopener"><span class="row-idx">code<br>/andrea-campa</span><span class="row-rule"></span><span class="row-label">github<svg class="icon" aria-hidden="true"><use href="#i-ne"></use></svg></span></a></li>
+                    <li><a class="row-link" href="https://linkedin.com/in/andrea-campagnolo/" target="_blank" rel="noopener"><span class="row-idx">cv<br>/andrea-campagnolo</span><span class="row-rule"></span><span class="row-label">linkedin<svg class="icon" aria-hidden="true"><use href="#i-ne"></use></svg></span></a></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-row">
+                <a class="to-top" href="#top">back to the top <svg class="icon" aria-hidden="true"><use href="#i-up"></use></svg></a>
+                <p>&copy; 2026 designed by andrea campa</p>
+            </div>
+            <div class="footer-row">
+                <ul class="badges" aria-label="Badges">
+                    <li class="badge"><span class="badge-l">trn</span><span class="badge-r">made in<br>turin, it</span></li>
+                </ul>
+                <p class="footer-meta">
+                    last modified <time id="modified">&mdash;</time>
+                    <span class="keys"><br>keys <kbd>1</kbd>&ndash;<kbd>6</kbd> jump &middot; <kbd>0</kbd> top &middot; <kbd>i</kbd> invert</span>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Status bar: current section, scroll meter, pointer position, theme toggle. -->
+    <div class="statusbar">
+        <p class="sb-section" aria-hidden="true"><span class="sb-led"></span><span class="sb-idx">00</span><span class="sb-name">index</span></p>
+        <p class="sb-progress" aria-hidden="true"><span class="meter"><span class="meter-fill"></span></span><span class="sb-pct">000%</span></p>
+        <p class="sb-xy" aria-hidden="true">x <span class="sb-x">0000</span> y <span class="sb-y">0000</span></p>
+        <div class="sb-controls">
+            <button class="sb-btn" type="button" data-action="theme" aria-pressed="false">invert</button>
         </div>
-        <i id="arrow" class="fa-solid fa-arrow-down bouncing-arrow"></i>
-    </nav>
+    </div>
 
-    <main>
+    <div class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+        <figure class="lightbox-figure">
+            <img class="lightbox-img" alt="">
+            <figcaption class="lightbox-caption"><span class="lightbox-alt"></span><span class="lightbox-size"></span></figcaption>
+        </figure>
+        <button class="lightbox-close sb-btn" type="button">close <kbd>esc</kbd></button>
+    </div>
 
-        <div class="section">
-            <h1 id="0" class="titles be-sticky">@campa</h1>
-            <img class="profile-pic" src="./assets/profile_pic.jpeg" alt="Andrea Campa">
-            <h2>>whoami</h2>
-            <p>
-                I'm a sound designer, DJ, coder and multi-instrumentalist based in Turin, Italy.<br><br>
-                Drawing inspiration from the world of fashion, design and architecture, I try to channel the creativity of these worlds into what I make.<br><br>
-                This website is part portfolio, part design project to gather my work.
-            </p>
-        </div>
-
-        
-        <div class="section"> 
-            <h1 id="1" class="titles be-sticky">sound design</h1>
-
-            <h2>EXPERIMENTAL SOUNDS</h2>
-            <p>
-                A diverse collection of sounds that span field recordings, resampling and playing with synths.
-            </p>
-            <p>
-                <iframe class="soundcloud" width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1760709834%3Fsecret_token%3Ds-LK1UkWchuyC&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/iamcampa" title="andrea campa" target="_blank" style="color: #cccccc; text-decoration: none;">andrea campa</a> · <a href="https://soundcloud.com/iamcampa/sets/sounds/s-LK1UkWchuyC" title="sounds" target="_blank" style="color: #cccccc; text-decoration: none;">sounds</a></div>
-            </p>
-            <p>A bit of context about my favorite pieces:</p>
-            <p>
-                <b>madrid 2049</b> is a cyberpunk interpretation of the city's metro. It combines recordings taken during a 2015 trip and a futuristic setting.
-            </p>
-            <p>
-                <b>big place 1/2</b>: I stretched sounds hundreds of times their original length, creating sonic landscapes that feel like you're in an enormous space.
-            </p>
-            <p>
-                <b>modular birth</b> is a snippet from a modular synth masterclass I attended in 2019. I imagined what a digital birth might sound like.
-            </p>
-
-                
-            <h2>REDESIGN</h2>
-            <p>
-                In this project I decided to rework fashion commercials by replacing their original soundtrack and sound design with my own.<br>
-            </p>
-            <div class="ratio-16-9">
-                <iframe src="https://www.youtube-nocookie.com/embed/UHFjxD2jJpQ?si=L9Dt5V3_m6p5oWSR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-            <div class="ratio-16-9">
-                <iframe src="https://www.youtube-nocookie.com/embed/vkbp-vn2tYM?si=yfvAd_v_xq_NGf7S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-
-            <h2>SONIC BRANDING</h2>
-            <p>
-                A jingle tailored to the 2023 edition of FLOReal
-            </p>
-            <p>
-                <iframe class="soundcloud" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1724476794%3Fsecret_token%3Ds-d7azr8SWD4R&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/iamcampa" title="andrea campa" target="_blank" style="color: #cccccc; text-decoration: none;">andrea campa</a> · <a href="https://soundcloud.com/iamcampa/floreal-jingle/s-d7azr8SWD4R" title="Floreal Sound ID" target="_blank" style="color: #cccccc; text-decoration: none;">Floreal Sound ID</a></div>
-            </p>  
-            <p>
-                I tried to imagine what the sonic branding for Museo Nazionale del Cinema would sound like
-            </p>
-            <p>
-                <iframe class="soundcloud" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1724475366%3Fsecret_token%3Ds-aZXJUAlAELU&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/iamcampa" title="andrea campa" target="_blank" style="color: #cccccc; text-decoration: none;">andrea campa</a> · <a href="https://soundcloud.com/iamcampa/museo-del-cinema-sonic-branding/s-aZXJUAlAELU" title="Museo Del Cinema Sound ID" target="_blank" style="color: #cccccc; text-decoration: none;">Museo Del Cinema Sound ID</a></div>
-            </p>          
-        </div>
-
-        <div class="section">
-            <h1 id="2" class="titles be-sticky">@inarushhhh</h1>
-            <h2>CLUB MUSIC ALIAS</h2>
-            <p>
-                <b>INA RUSH</b> is the alias I DJ and produce club music under. Upbeat bass, latin tek and seductive vocals, all tied into an eclectic style.
-            </p>
-            <p>
-                I'm a resident at <a href="https://www.instagram.com/amoreeeeeeeeeeeeeeeeeee/" target="_blank">amorə</a>, Turin's largest queer clubbing event. Before that came a residency in <a href="https://www.instagram.com/wired.prd/" target="_blank">Wired Productions</a>' Hypergroove season, playing alongside international guests, and a run at <b>Lipstick</b>, a party built around the Italian scene.
-            </p>
-            <p>
-                My music has landed on two labels: <a href="https://www.instagram.com/bouncevision.records/" target="_blank">Bounce Vision Records</a> (bounce) and <a href="https://www.instagram.com/angelsrecs/" target="_blank">Angels Gun Club</a> (latincore).
-            </p>
-            <p>
-                Some tracks have been played across the international hard bounce/trance movement, reaching the widely recognized <a href="https://www.instagram.com/verkniptevents/" target="_blank">verknipt</a> event, with support from <a href="https://www.instagram.com/240kmh/" target="_blank">240kmh</a> collective members like <b>Adrian Mills</b>, <b>Cloudy</b> and <b>Human Error</b>.
-            </p>
-            <p>
-                <iframe class="soundcloud" width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?visual=true&url=https%3A%2F%2Fapi.soundcloud.com%2Fusers%2F1140680446&show_artwork=true&color=%23ff5500"></iframe>
-            </p>
-            <div class="ina-stack">
-                <div class="embed-cell">
-                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DWRo6vwjAYt/" data-instgrm-version="14">
-                        <a href="https://www.instagram.com/p/DWRo6vwjAYt/" target="_blank">View this post on Instagram</a>
-                    </blockquote>
-                </div>
-                <div class="img-cell">
-                    <img src="./assets/ina/ina2.jpg" alt="in a rush studio portrait">
-                </div>
-            </div>
-            <script async src="https://www.instagram.com/embed.js"></script>
-        </div>
-
-        <div class="section">
-            <h1 id="3" class="titles be-sticky">coding</h1>
-            
-            <h2>P5.JS COLLECTION</h2>
-            <p> 
-                p5.js is a javascript creative coding library. I use it to generate and process audio/video content. 
-            </p>
-            <p> 
-                <a href="./projects/dvd-logo/" target="_blank"><u>Click here</u></a> to see my sketches.
-            </p>
-           
-
-            <h2>MAX FOR LIVE</h2>
-            <p> 
-                <a href="https://www.ableton.com/en/live/max-for-live/" target="_blank"><u>Max for Live</u></a> is a software platform that integrates visual programming with Ableton Live.<br><br>
-                It allows the user to create <b>audio</b> and <b>midi</b> devices, but also extends to <b>video</b> processing and <b>real-world</b> integration, making it extremely versatile for creating mixed-media art that combines audio, video, and physical elements.<br><br>
-                These are some of my M4L devices:
-            </p>
-
-            <h3>CREATIVE DELAY</h3>
-            <p> 
-                This device offers four delay types:
-            </p>    
-            <ul>
-                <li>Stereo</li>
-                <li>Standard Ping Pong</li>
-                <li>Narrowing Stereo</li>
-                <li>Expanding Ping Pong</li>
-            </ul>
-            <p> 
-                and a filter for emulating the vintage sound of analog units.
-            </p>
-            <div class="intelligent-stack">
-                <div class="ratio-16-9">
-                    <img src="./assets/max4live/pingpong_1.jpeg" alt="Creative Delay Max for Live device, view 1">
-                </div>
-                <div class="ratio-16-9">
-                    <img src="./assets/max4live/pingpong_2.jpeg" alt="Creative Delay Max for Live device, view 2">
-                </div>
-            </div>
-
-            <h3>MODDED LFO</h3>
-            <p> 
-                I modded the stock M4L LFO by adding new functionality while preserving most of its original code.<br>
-                Now it features:
-            </p>    
-            <ul>
-                <li>Musical Subdivision Frequency</li>
-                <li>Ramp Time for smooth transitions</li>
-                <li>Buttons to trigger different time settings</li>
-            </ul>
-            <div class="intelligent-stack">
-                <div class="ratio-16-9">
-                    <img src="./assets/max4live/lfomod_1.jpeg" alt="Modded LFO Max for Live device, view 1">
-                </div>
-                <div class="ratio-16-9">
-                    <img src="./assets/max4live/lfomod_2.jpeg" alt="Modded LFO Max for Live device, view 2">
-                </div>
-            </div>
-            
-        </div>
-        
-        
-        <div class="section"> 
-            <h1 id="4" class="titles be-sticky">hardware</h1>
-            <h2>TINKERING</h2>
-            <p>Here's a showcase of my hardware tinkering experiments, predominantly focused on guitar and synth pedals, with a touch of MIDI creations and various utility-driven audio devices.</p>
-            <p>My hobby of building gear has been an awesome way to get my head around how signals and audio really work, all while making wild sounds.</p>
-            
-            <h2>GUITAR PEDALS</h2>
-            <div class="hardware-card">
-                <div class="left">
-                    <h3>60X BOOST (SUPER HARD ON CLONE)</h3>
-                    <p>The Zvex Super Hard On is a compact, high-gain booster pedal known for its simplicity and incredible signal boost capabilities, providing a staggering 60 times increase in volume.</p>
-                </div>
-                
-                <div class="right">
-                    <img src="./assets/pedals/booster.jpeg" alt="60X Boost booster pedal (Super Hard On clone)">
-                </div>
-            </div>
-
-            
-
-            <div class="hardware-card">
-                <div class="left">
-                    <h3>WEIRD FUZZ (FUZZ FACTORY CLONE)</h3>
-                    <p>The Zvex Fuzz Factory is an iconic and versatile fuzz pedal renowned for its unique and experimental sound. It offers a wide range of chaotic sounds and wild sonic textures.</p>
-                </div>
-                <div class="right">
-                    <img src="./assets/pedals/factory.jpeg" alt="Weird Fuzz pedal (Fuzz Factory clone)">
-                </div>
-            </div>
-
-            <h2>SYNTH PEDALS</h2>
-            <div class="hardware-card">
-                <div class="left">
-                    <h3>TWO-VOICED SYNTH</h3>
-                    <p>This drone pedal/synth has two knobs for pitch control of square wave oscillators, octave switches for extended tonal range, and a bypass switch to let through your original input signal. Fully designed and built by me.</p>
-                </div>
-                <div class="right">
-                    <img src="./assets/pedals/2voiced.jpeg" alt="Two-voiced drone synth pedal">
-                </div>
-            </div>
-
-            <div class="hardware-card">
-                <div class="left">
-                    <h3>BOSS DD-3 ANALOG MOD</h3>
-                    <p>I added a switch to toggle between standard repetitions and filtered ones, which emulate the warmer sound of bucket brigade delays like the EHX Memory Man.</p>
-                </div>
-                <div class="right">
-                    <img src="./assets/pedals/dd3.jpeg" alt="Boss DD-3 delay with analog mod switch">
-                </div>
-            </div>
-
-            <h2>UTILITIES</h2>
-            <div class="hardware-card">
-                <div class="left">
-                    <h3>TRUE BYPASS LOOP</h3>
-                    <p>This can be used to add true bypass to any effect linked to its send/return loop.</p>
-                </div>
-                <div class="right">
-                    <img src="./assets/pedals/bypass.jpeg" alt="True bypass loop utility pedal">
-                </div>
-            </div>
-
-            <div class="hardware-card">
-                <div class="left">
-                    <h3>EXPRESSION KNOB</h3>
-                    <p>This one-knob pedal can be used to replace an expression pedal placed on a fixed position.</p>
-                    <p>By toggling it on and off, you can seamlessly switch between two preset values, effectively adding preset functionality to compatible hardware.</p>
-                </div>
-                <div class="right">
-                    <img src="./assets/pedals/expressionknob.jpeg" alt="Expression knob pedal">
-                </div>
-            </div>
-            
-            <h2>MIDI</h2>
-            <div class="hardware-card">
-                <div class="left">
-                    <h3>DIN2USB MIDI HOST</h3>
-                    <p>This device takes MIDI sent/received from the din connector and converts it to a usb signal. Built using <a href="https://www.hobbytronics.co.uk/" target="_blank"><u>hobbytronics</u></a> parts.</p>
-                </div>
-                <div class="right">
-                    <img src="./assets/pedals/midi2usb.jpeg" alt="DIN2USB MIDI host device">
-                </div>
-            </div>
-        </div>
-
-
-        <div class="section"> 
-            <h1 id="5" class="titles be-sticky">contacts</h1>
-            <table>
-                <tr>
-                    <td><i class="fa-solid fa-music"></i>&nbsp;</td>
-                    <td><a href="https://soundcloud.com/inarushhhh">SoundCloud DJ</a></td>
-                </tr>
-                <tr>
-                    <td><i class="fab fa-instagram"></i></td>
-                    <td><a href="https://www.instagram.com/andreacampa_">Instagram Personal</a></td>
-                </tr>
-                <tr>
-                    <td><i class="fab fa-instagram"></i></td>
-                    <td><a href="https://www.instagram.com/inarushhhh">Instagram DJ</a></td>
-                </tr>
-                <tr>
-                    <td><i class="fab fa-github"></i></td>
-                    <td><a href="https://github.com/andrea-campa">GitHub</a></td>
-                </tr>
-                <tr>
-                    <td><i class="fab fa-linkedin"></i></td>
-                    <td><a href="https://linkedin.com/in/andrea-campagnolo/">LinkedIn</a></td>
-                </tr>
-            </table>
-        </div>
-    </main>
-    <footer>
-        <a href="#top"><u>Back to the top</u></a>
-        <p>&copy; 2026 Designed and coded by Andrea Campa</p>
-    </footer>
-
-    <script src="./js/nav-space.js"></script>
-    <script src="./js/dark_mode.js"></script>
+    <svg class="sprite" aria-hidden="true" focusable="false">
+        <symbol id="i-ne" viewBox="0 0 16 16"><path d="M4.5 11.5l7-7M5.5 4.5h6v6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></symbol>
+        <symbol id="i-down" viewBox="0 0 16 16"><path d="M8 2.5v10M3.5 8l4.5 4.5L12.5 8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></symbol>
+        <symbol id="i-up" viewBox="0 0 16 16"><path d="M8 13.5v-10M3.5 8L8 3.5 12.5 8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></symbol>
+    </svg>
 </body>
 </html>
