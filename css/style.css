@@ -594,6 +594,7 @@ p a:not([class]) {
   cursor: zoom-in;
 }
 
+/* 1-bit dithered photos; the colour original wipes in on hover. */
 .dither {
   position: relative;
   overflow: hidden;
@@ -603,6 +604,21 @@ p a:not([class]) {
     height: 100%;
     object-fit: cover;
   }
+
+  & canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    image-rendering: pixelated;
+    pointer-events: none;
+    clip-path: inset(0 0 0 0);
+    transition: clip-path .5s steps(8, end);
+  }
+
+  &:hover canvas,
+  &:focus-visible canvas,
+  &.is-revealed canvas { clip-path: inset(100% 0 0 0); }
 }
 
 /* Greyscale until you pay attention to it. */

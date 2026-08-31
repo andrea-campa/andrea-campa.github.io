@@ -14,6 +14,7 @@
             if (localStorage.getItem('theme') === 'light') document.documentElement.dataset.theme = 'light';
         } catch (e) {}
     </script>
+    <script src="./js/dither.js" defer></script>
     <script src="./js/main.js" defer></script>
 </head>
 <body>
@@ -65,7 +66,7 @@
                         <span class="entry-idx">1.1</span>
                         <span>about</span>
                         <button class="portrait dither" type="button" data-zoom aria-label="Enlarge portrait">
-                            <img src="./assets/profile_pic.jpeg" alt="Portrait of Andrea Campa" width="1280" height="1280">
+                            <img src="./assets/profile_pic.jpeg" alt="Portrait of Andrea Campa" data-dither width="1280" height="1280">
                         </button>
                     </div>
                     <div class="entry-body">
@@ -225,7 +226,7 @@
                                 </blockquote>
                             </div>
                             <button class="img-cell dither" type="button" data-zoom aria-label="Enlarge photo: ina rush studio portrait">
-                                <img src="./assets/ina/ina2.jpg" alt="ina rush studio portrait" loading="lazy" width="855" height="855">
+                                <img src="./assets/ina/ina2.jpg" alt="ina rush studio portrait" data-dither loading="lazy" width="855" height="855">
                             </button>
                         </div>
                         <script async src="https://www.instagram.com/embed.js"></script>
@@ -337,7 +338,7 @@
                                     <p>The Zvex Super Hard On is a compact, high-gain booster pedal known for its simplicity and incredible signal boost capabilities, providing a staggering 60 times increase in volume.</p>
                                 </div>
                                 <button class="item-thumb dither" type="button" data-zoom aria-label="Enlarge photo: 60x boost">
-                                    <img src="./assets/pedals/booster.jpeg" alt="60X Boost booster pedal (Super Hard On clone)" loading="lazy" width="300" height="300">
+                                    <img src="./assets/pedals/booster.jpeg" alt="60X Boost booster pedal (Super Hard On clone)" data-dither loading="lazy" width="300" height="300">
                                 </button>
                             </li>
                             <li class="item">
@@ -347,7 +348,7 @@
                                     <p>The Zvex Fuzz Factory is an iconic and versatile fuzz pedal renowned for its unique and experimental sound. It offers a wide range of chaotic sounds and wild sonic textures.</p>
                                 </div>
                                 <button class="item-thumb dither" type="button" data-zoom aria-label="Enlarge photo: weird fuzz">
-                                    <img src="./assets/pedals/factory.jpeg" alt="Weird Fuzz pedal (Fuzz Factory clone)" loading="lazy" width="300" height="300">
+                                    <img src="./assets/pedals/factory.jpeg" alt="Weird Fuzz pedal (Fuzz Factory clone)" data-dither loading="lazy" width="300" height="300">
                                 </button>
                             </li>
                         </ul>
@@ -369,7 +370,7 @@
                                     <p>This drone pedal/synth has two knobs for pitch control of square wave oscillators, octave switches for extended tonal range, and a bypass switch to let through your original input signal. Fully designed and built by me.</p>
                                 </div>
                                 <button class="item-thumb dither" type="button" data-zoom aria-label="Enlarge photo: two-voiced synth">
-                                    <img src="./assets/pedals/2voiced.jpeg" alt="Two-voiced drone synth pedal" loading="lazy" width="320" height="320">
+                                    <img src="./assets/pedals/2voiced.jpeg" alt="Two-voiced drone synth pedal" data-dither loading="lazy" width="320" height="320">
                                 </button>
                             </li>
                             <li class="item">
@@ -379,7 +380,7 @@
                                     <p>I added a switch to toggle between standard repetitions and filtered ones, which emulate the warmer sound of bucket brigade delays like the EHX Memory Man.</p>
                                 </div>
                                 <button class="item-thumb dither" type="button" data-zoom aria-label="Enlarge photo: Boss DD-3 analog mod">
-                                    <img src="./assets/pedals/dd3.jpeg" alt="Boss DD-3 delay with analog mod switch" loading="lazy" width="320" height="320">
+                                    <img src="./assets/pedals/dd3.jpeg" alt="Boss DD-3 delay with analog mod switch" data-dither loading="lazy" width="320" height="320">
                                 </button>
                             </li>
                         </ul>
@@ -401,7 +402,7 @@
                                     <p>This can be used to add true bypass to any effect linked to its send/return loop.</p>
                                 </div>
                                 <button class="item-thumb dither" type="button" data-zoom aria-label="Enlarge photo: true bypass loop">
-                                    <img src="./assets/pedals/bypass.jpeg" alt="True bypass loop utility pedal" loading="lazy" width="300" height="300">
+                                    <img src="./assets/pedals/bypass.jpeg" alt="True bypass loop utility pedal" data-dither loading="lazy" width="300" height="300">
                                 </button>
                             </li>
                             <li class="item">
@@ -412,7 +413,7 @@
                                     <p>By toggling it on and off, you can seamlessly switch between two preset values, effectively adding preset functionality to compatible hardware.</p>
                                 </div>
                                 <button class="item-thumb dither" type="button" data-zoom aria-label="Enlarge photo: expression knob">
-                                    <img src="./assets/pedals/expressionknob.jpeg" alt="Expression knob pedal" loading="lazy" width="320" height="320">
+                                    <img src="./assets/pedals/expressionknob.jpeg" alt="Expression knob pedal" data-dither loading="lazy" width="320" height="320">
                                 </button>
                             </li>
                         </ul>
@@ -434,7 +435,7 @@
                                     <p>This device takes MIDI sent/received from the din connector and converts it to a usb signal. Built using <a href="https://www.hobbytronics.co.uk/" target="_blank" rel="noopener">hobbytronics</a> parts.</p>
                                 </div>
                                 <button class="item-thumb dither" type="button" data-zoom aria-label="Enlarge photo: DIN2USB MIDI host">
-                                    <img src="./assets/pedals/midi2usb.jpeg" alt="DIN2USB MIDI host device" loading="lazy" width="320" height="320">
+                                    <img src="./assets/pedals/midi2usb.jpeg" alt="DIN2USB MIDI host device" data-dither loading="lazy" width="320" height="320">
                                 </button>
                             </li>
                         </ul>
