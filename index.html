@@ -14,6 +14,7 @@
             if (localStorage.getItem('theme') === 'light') document.documentElement.dataset.theme = 'light';
         } catch (e) {}
     </script>
+    <script src="./js/cursor.js" defer></script>
     <script src="./js/dither.js" defer></script>
     <script src="./js/main.js" defer></script>
 </head>
@@ -39,16 +40,16 @@
 
         <nav class="hero" aria-label="Sections">
             <ol class="rows hero-rows">
-                <li style="--i:0"><a class="row-link" href="#campa" aria-label="@campa"><span class="row-idx">01</span><span class="row-rule"></span><span class="row-label">@campa</span></a></li>
-                <li style="--i:1"><a class="row-link" href="#sound" aria-label="sound design"><span class="row-idx">02</span><span class="row-rule"></span><span class="row-label">sound design</span></a></li>
-                <li style="--i:2"><a class="row-link" href="#inarush" aria-label="@inarushhhh"><span class="row-idx">03</span><span class="row-rule"></span><span class="row-label">@inarushhhh</span></a></li>
-                <li style="--i:3"><a class="row-link" href="#coding" aria-label="coding"><span class="row-idx">04</span><span class="row-rule"></span><span class="row-label">coding</span></a></li>
-                <li style="--i:4"><a class="row-link" href="#hardware" aria-label="hardware"><span class="row-idx">05</span><span class="row-rule"></span><span class="row-label">hardware</span></a></li>
-                <li style="--i:5"><a class="row-link" href="#contacts" aria-label="contacts"><span class="row-idx">06</span><span class="row-rule"></span><span class="row-label">contacts</span></a></li>
+                <li style="--i:0"><a class="row-link" href="#campa" data-snap=".row-label" aria-label="@campa"><span class="row-idx">01</span><span class="row-rule"></span><span class="row-label">@campa</span></a></li>
+                <li style="--i:1"><a class="row-link" href="#sound" data-snap=".row-label" aria-label="sound design"><span class="row-idx">02</span><span class="row-rule"></span><span class="row-label">sound design</span></a></li>
+                <li style="--i:2"><a class="row-link" href="#inarush" data-snap=".row-label" aria-label="@inarushhhh"><span class="row-idx">03</span><span class="row-rule"></span><span class="row-label">@inarushhhh</span></a></li>
+                <li style="--i:3"><a class="row-link" href="#coding" data-snap=".row-label" aria-label="coding"><span class="row-idx">04</span><span class="row-rule"></span><span class="row-label">coding</span></a></li>
+                <li style="--i:4"><a class="row-link" href="#hardware" data-snap=".row-label" aria-label="hardware"><span class="row-idx">05</span><span class="row-rule"></span><span class="row-label">hardware</span></a></li>
+                <li style="--i:5"><a class="row-link" href="#contacts" data-snap=".row-label" aria-label="contacts"><span class="row-idx">06</span><span class="row-rule"></span><span class="row-label">contacts</span></a></li>
             </ol>
             <div class="hero-foot">
                 <p><span class="keys">press <kbd>1</kbd>&ndash;<kbd>6</kbd> to jump</span><span class="hero-count no-keys">06 sections / 12 entries</span></p>
-                <a class="hero-scroll" href="#campa">scroll <svg class="icon" aria-hidden="true"><use href="#i-down"></use></svg></a>
+                <a class="hero-scroll" href="#campa" data-cursor="">scroll <svg class="icon" aria-hidden="true"><use href="#i-down"></use></svg></a>
             </div>
         </nav>
 
@@ -65,7 +66,7 @@
                     <div class="entry-meta">
                         <span class="entry-idx">1.1</span>
                         <span>about</span>
-                        <button class="portrait dither" type="button" data-zoom aria-label="Enlarge portrait">
+                        <button class="portrait dither" type="button" data-zoom data-cursor="enlarge +" aria-label="Enlarge portrait">
                             <img src="./assets/profile_pic.jpeg" alt="Portrait of Andrea Campa" data-dither width="1280" height="1280">
                         </button>
                     </div>
@@ -225,7 +226,7 @@
                                     <a href="https://www.instagram.com/p/DWRo6vwjAYt/" target="_blank" rel="noopener">View this post on Instagram</a>
                                 </blockquote>
                             </div>
-                            <button class="img-cell dither" type="button" data-zoom aria-label="Enlarge photo: ina rush studio portrait">
+                            <button class="img-cell dither" type="button" data-zoom data-cursor="enlarge +" aria-label="Enlarge photo: ina rush studio portrait">
                                 <img src="./assets/ina/ina2.jpg" alt="ina rush studio portrait" data-dither loading="lazy" width="855" height="855">
                             </button>
                         </div>
@@ -251,10 +252,10 @@
                         <h3>p5.js collection</h3>
                         <p>p5.js is a javascript creative coding library. I use it to generate and process audio/video content.</p>
                         <ol class="index-list">
-                            <li><a href="./projects/dvd-logo/"><span class="il-n">01</span><span class="il-name">dvd logo synth</span><span class="il-desc">every bounce plays a note</span><span class="il-tag">sound</span></a></li>
-                            <li><a href="./projects/dotcam/"><span class="il-n">02</span><span class="il-name">dotcam</span><span class="il-desc">your webcam as squares, dots or ascii</span><span class="il-tag">camera</span></a></li>
-                            <li><a href="./projects/noiseballs/"><span class="il-n">03</span><span class="il-name">noiseballs</span><span class="il-desc">dots drifting on perlin noise</span><span class="il-tag"></span></a></li>
-                            <li><a href="./projects/glitchcam/"><span class="il-n">04</span><span class="il-name">glitchcam</span><span class="il-desc">mirrored, inverted webcam stripes</span><span class="il-tag">camera</span></a></li>
+                            <li><a href="./projects/dvd-logo/" data-cursor="run sketch"><span class="il-n">01</span><span class="il-name">dvd logo synth</span><span class="il-desc">every bounce plays a note</span><span class="il-tag">sound</span></a></li>
+                            <li><a href="./projects/dotcam/" data-cursor="run sketch"><span class="il-n">02</span><span class="il-name">dotcam</span><span class="il-desc">your webcam as squares, dots or ascii</span><span class="il-tag">camera</span></a></li>
+                            <li><a href="./projects/noiseballs/" data-cursor="run sketch"><span class="il-n">03</span><span class="il-name">noiseballs</span><span class="il-desc">dots drifting on perlin noise</span><span class="il-tag"></span></a></li>
+                            <li><a href="./projects/glitchcam/" data-cursor="run sketch"><span class="il-n">04</span><span class="il-name">glitchcam</span><span class="il-desc">mirrored, inverted webcam stripes</span><span class="il-tag">camera</span></a></li>
                         </ol>
                     </div>
                 </article>
@@ -281,8 +282,8 @@
                                 <li>Expanding Ping Pong</li>
                             </ul>
                             <div class="gallery">
-                                <button class="shot" type="button" data-zoom><img class="attn" src="./assets/max4live/pingpong_1.jpeg" alt="Creative Delay Max for Live device, view 1" loading="lazy" width="1280" height="720"></button>
-                                <button class="shot" type="button" data-zoom><img class="attn" src="./assets/max4live/pingpong_2.jpeg" alt="Creative Delay Max for Live device, view 2" loading="lazy" width="1280" height="720"></button>
+                                <button class="shot" type="button" data-zoom data-cursor="enlarge +"><img class="attn" src="./assets/max4live/pingpong_1.jpeg" alt="Creative Delay Max for Live device, view 1" loading="lazy" width="1280" height="720"></button>
+                                <button class="shot" type="button" data-zoom data-cursor="enlarge +"><img class="attn" src="./assets/max4live/pingpong_2.jpeg" alt="Creative Delay Max for Live device, view 2" loading="lazy" width="1280" height="720"></button>
                             </div>
                         </div>
 
@@ -295,8 +296,8 @@
                                 <li>Buttons to trigger different time settings</li>
                             </ul>
                             <div class="gallery">
-                                <button class="shot" type="button" data-zoom><img class="attn" src="./assets/max4live/lfomod_1.jpeg" alt="Modded LFO Max for Live device, view 1" loading="lazy" width="1280" height="720"></button>
-                                <button class="shot" type="button" data-zoom><img class="attn" src="./assets/max4live/lfomod_2.jpeg" alt="Modded LFO Max for Live device, view 2" loading="lazy" width="1280" height="720"></button>
+                                <button class="shot" type="button" data-zoom data-cursor="enlarge +"><img class="attn" src="./assets/max4live/lfomod_1.jpeg" alt="Modded LFO Max for Live device, view 1" loading="lazy" width="1280" height="720"></button>
+                                <button class="shot" type="button" data-zoom data-cursor="enlarge +"><img class="attn" src="./assets/max4live/lfomod_2.jpeg" alt="Modded LFO Max for Live device, view 2" loading="lazy" width="1280" height="720"></button>
                             </div>
                         </div>
                     </div>
@@ -337,7 +338,7 @@
                                     <p class="item-sub">super hard on clone</p>
                                     <p>The Zvex Super Hard On is a compact, high-gain booster pedal known for its simplicity and incredible signal boost capabilities, providing a staggering 60 times increase in volume.</p>
                                 </div>
-                                <button class="item-thumb dither" type="button" data-zoom aria-label="Enlarge photo: 60x boost">
+                                <button class="item-thumb dither" type="button" data-zoom data-cursor="enlarge +" aria-label="Enlarge photo: 60x boost">
                                     <img src="./assets/pedals/booster.jpeg" alt="60X Boost booster pedal (Super Hard On clone)" data-dither loading="lazy" width="300" height="300">
                                 </button>
                             </li>
@@ -347,7 +348,7 @@
                                     <p class="item-sub">fuzz factory clone</p>
                                     <p>The Zvex Fuzz Factory is an iconic and versatile fuzz pedal renowned for its unique and experimental sound. It offers a wide range of chaotic sounds and wild sonic textures.</p>
                                 </div>
-                                <button class="item-thumb dither" type="button" data-zoom aria-label="Enlarge photo: weird fuzz">
+                                <button class="item-thumb dither" type="button" data-zoom data-cursor="enlarge +" aria-label="Enlarge photo: weird fuzz">
                                     <img src="./assets/pedals/factory.jpeg" alt="Weird Fuzz pedal (Fuzz Factory clone)" data-dither loading="lazy" width="300" height="300">
                                 </button>
                             </li>
@@ -369,7 +370,7 @@
                                     <p class="item-sub">original design</p>
                                     <p>This drone pedal/synth has two knobs for pitch control of square wave oscillators, octave switches for extended tonal range, and a bypass switch to let through your original input signal. Fully designed and built by me.</p>
                                 </div>
-                                <button class="item-thumb dither" type="button" data-zoom aria-label="Enlarge photo: two-voiced synth">
+                                <button class="item-thumb dither" type="button" data-zoom data-cursor="enlarge +" aria-label="Enlarge photo: two-voiced synth">
                                     <img src="./assets/pedals/2voiced.jpeg" alt="Two-voiced drone synth pedal" data-dither loading="lazy" width="320" height="320">
                                 </button>
                             </li>
@@ -379,7 +380,7 @@
                                     <p class="item-sub">delay mod</p>
                                     <p>I added a switch to toggle between standard repetitions and filtered ones, which emulate the warmer sound of bucket brigade delays like the EHX Memory Man.</p>
                                 </div>
-                                <button class="item-thumb dither" type="button" data-zoom aria-label="Enlarge photo: Boss DD-3 analog mod">
+                                <button class="item-thumb dither" type="button" data-zoom data-cursor="enlarge +" aria-label="Enlarge photo: Boss DD-3 analog mod">
                                     <img src="./assets/pedals/dd3.jpeg" alt="Boss DD-3 delay with analog mod switch" data-dither loading="lazy" width="320" height="320">
                                 </button>
                             </li>
@@ -401,7 +402,7 @@
                                     <p class="item-sub">send / return loop</p>
                                     <p>This can be used to add true bypass to any effect linked to its send/return loop.</p>
                                 </div>
-                                <button class="item-thumb dither" type="button" data-zoom aria-label="Enlarge photo: true bypass loop">
+                                <button class="item-thumb dither" type="button" data-zoom data-cursor="enlarge +" aria-label="Enlarge photo: true bypass loop">
                                     <img src="./assets/pedals/bypass.jpeg" alt="True bypass loop utility pedal" data-dither loading="lazy" width="300" height="300">
                                 </button>
                             </li>
@@ -412,7 +413,7 @@
                                     <p>This one-knob pedal can be used to replace an expression pedal placed on a fixed position.</p>
                                     <p>By toggling it on and off, you can seamlessly switch between two preset values, effectively adding preset functionality to compatible hardware.</p>
                                 </div>
-                                <button class="item-thumb dither" type="button" data-zoom aria-label="Enlarge photo: expression knob">
+                                <button class="item-thumb dither" type="button" data-zoom data-cursor="enlarge +" aria-label="Enlarge photo: expression knob">
                                     <img src="./assets/pedals/expressionknob.jpeg" alt="Expression knob pedal" data-dither loading="lazy" width="320" height="320">
                                 </button>
                             </li>
@@ -434,7 +435,7 @@
                                     <p class="item-sub">din to usb converter</p>
                                     <p>This device takes MIDI sent/received from the din connector and converts it to a usb signal. Built using <a href="https://www.hobbytronics.co.uk/" target="_blank" rel="noopener">hobbytronics</a> parts.</p>
                                 </div>
-                                <button class="item-thumb dither" type="button" data-zoom aria-label="Enlarge photo: DIN2USB MIDI host">
+                                <button class="item-thumb dither" type="button" data-zoom data-cursor="enlarge +" aria-label="Enlarge photo: DIN2USB MIDI host">
                                     <img src="./assets/pedals/midi2usb.jpeg" alt="DIN2USB MIDI host device" data-dither loading="lazy" width="320" height="320">
                                 </button>
                             </li>
@@ -451,11 +452,11 @@
                 </header>
 
                 <ul class="rows contact-rows">
-                    <li><a class="row-link" href="https://soundcloud.com/inarushhhh" target="_blank" rel="noopener"><span class="row-idx">dj<br>/inarushhhh</span><span class="row-rule"></span><span class="row-label">soundcloud<svg class="icon" aria-hidden="true"><use href="#i-ne"></use></svg></span></a></li>
-                    <li><a class="row-link" href="https://www.instagram.com/andreacampa_" target="_blank" rel="noopener"><span class="row-idx">personal<br>@andreacampa_</span><span class="row-rule"></span><span class="row-label">instagram<svg class="icon" aria-hidden="true"><use href="#i-ne"></use></svg></span></a></li>
-                    <li><a class="row-link" href="https://www.instagram.com/inarushhhh" target="_blank" rel="noopener"><span class="row-idx">dj<br>@inarushhhh</span><span class="row-rule"></span><span class="row-label">instagram<svg class="icon" aria-hidden="true"><use href="#i-ne"></use></svg></span></a></li>
-                    <li><a class="row-link" href="https://github.com/andrea-campa" target="_blank" rel="noopener"><span class="row-idx">code<br>/andrea-campa</span><span class="row-rule"></span><span class="row-label">github<svg class="icon" aria-hidden="true"><use href="#i-ne"></use></svg></span></a></li>
-                    <li><a class="row-link" href="https://linkedin.com/in/andrea-campagnolo/" target="_blank" rel="noopener"><span class="row-idx">cv<br>/andrea-campagnolo</span><span class="row-rule"></span><span class="row-label">linkedin<svg class="icon" aria-hidden="true"><use href="#i-ne"></use></svg></span></a></li>
+                    <li><a class="row-link" href="https://soundcloud.com/inarushhhh" target="_blank" rel="noopener" data-snap=".row-label"><span class="row-idx">dj<br>/inarushhhh</span><span class="row-rule"></span><span class="row-label">soundcloud<svg class="icon" aria-hidden="true"><use href="#i-ne"></use></svg></span></a></li>
+                    <li><a class="row-link" href="https://www.instagram.com/andreacampa_" target="_blank" rel="noopener" data-snap=".row-label"><span class="row-idx">personal<br>@andreacampa_</span><span class="row-rule"></span><span class="row-label">instagram<svg class="icon" aria-hidden="true"><use href="#i-ne"></use></svg></span></a></li>
+                    <li><a class="row-link" href="https://www.instagram.com/inarushhhh" target="_blank" rel="noopener" data-snap=".row-label"><span class="row-idx">dj<br>@inarushhhh</span><span class="row-rule"></span><span class="row-label">instagram<svg class="icon" aria-hidden="true"><use href="#i-ne"></use></svg></span></a></li>
+                    <li><a class="row-link" href="https://github.com/andrea-campa" target="_blank" rel="noopener" data-snap=".row-label"><span class="row-idx">code<br>/andrea-campa</span><span class="row-rule"></span><span class="row-label">github<svg class="icon" aria-hidden="true"><use href="#i-ne"></use></svg></span></a></li>
+                    <li><a class="row-link" href="https://linkedin.com/in/andrea-campagnolo/" target="_blank" rel="noopener" data-snap=".row-label"><span class="row-idx">cv<br>/andrea-campagnolo</span><span class="row-rule"></span><span class="row-label">linkedin<svg class="icon" aria-hidden="true"><use href="#i-ne"></use></svg></span></a></li>
                 </ul>
             </section>
         </main>
@@ -483,7 +484,7 @@
         <p class="sb-progress" aria-hidden="true"><span class="meter"><span class="meter-fill"></span></span><span class="sb-pct">000%</span></p>
         <p class="sb-xy" aria-hidden="true">x <span class="sb-x">0000</span> y <span class="sb-y">0000</span></p>
         <div class="sb-controls">
-            <button class="sb-btn" type="button" data-action="theme" aria-pressed="false">invert</button>
+            <button class="sb-btn" type="button" data-action="theme" aria-pressed="false" data-cursor="light / dark">invert</button>
         </div>
     </div>
 
@@ -492,7 +493,16 @@
             <img class="lightbox-img" alt="">
             <figcaption class="lightbox-caption"><span class="lightbox-alt"></span><span class="lightbox-size"></span></figcaption>
         </figure>
-        <button class="lightbox-close sb-btn" type="button">close <kbd>esc</kbd></button>
+        <button class="lightbox-close sb-btn" type="button" data-cursor="">close <kbd>esc</kbd></button>
+    </div>
+
+    <div class="cursor" aria-hidden="true">
+        <span class="cursor-corner tl"></span>
+        <span class="cursor-corner tr"></span>
+        <span class="cursor-corner bl"></span>
+        <span class="cursor-corner br"></span>
+        <span class="cursor-dot"></span>
+        <span class="cursor-label"></span>
     </div>
 
     <svg class="sprite" aria-hidden="true" focusable="false">

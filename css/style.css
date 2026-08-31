@@ -1214,6 +1214,90 @@ p a:not([class]) {
 }
 
 
+/* Cursor ------------------------------------------------------------------ */
+
+.cursor { display: none; }
+
+.has-cursor,
+.has-cursor * { cursor: none !important; }
+
+.has-cursor .cursor {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.cursor > span {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  will-change: transform;
+  transition: opacity .2s;
+}
+
+.cursor-corner,
+.cursor-dot,
+.cursor-echo { mix-blend-mode: difference; }
+
+/* Reticle corners: the frame that trails and snaps. */
+.cursor-corner {
+  width: 8px;
+  height: 8px;
+  border: 0 solid #fff;
+
+  &.tl { border-width: 1.5px 0 0 1.5px; }
+  &.tr { border-width: 1.5px 1.5px 0 0; }
+  &.bl { border-width: 0 0 1.5px 1.5px; }
+  &.br { border-width: 0 1.5px 1.5px 0; }
+}
+
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  margin: -3px 0 0 -3px;
+  background: #fff;
+  transition: width .16s var(--ease-out), height .16s var(--ease-out), margin .16s var(--ease-out), opacity .2s;
+
+  .is-snapped & {
+    width: 4px;
+    height: 4px;
+    margin: -2px 0 0 -2px;
+  }
+
+  /* I-beam over text. */
+  .is-text & {
+    width: 2px;
+    height: 20px;
+    margin: -10px 0 0 -1px;
+  }
+}
+
+.cursor-label {
+  padding: 4px 6px 3px;
+  background: var(--ink);
+  color: var(--bg);
+  font: 10px/1 var(--mono);
+  letter-spacing: .02em;
+  text-transform: lowercase;
+  white-space: nowrap;
+  opacity: 0;
+
+  .has-label & { opacity: 1; }
+}
+
+/* Click echoes: decaying repeats, like a delay line. */
+.cursor-echo {
+  border: 1px solid #fff;
+  opacity: 0;
+}
+
+.cursor.is-hidden > span { opacity: 0; }
+
+
 /* Theme switch: the new theme paints in top-down, like an old screen. */
 ::view-transition-old(root),
 ::view-transition-new(root) {
@@ -1258,6 +1342,7 @@ p a:not([class]) {
   .frame-label,
   .statusbar,
   .lightbox,
+  .cursor,
   .skip-link { display: none !important; }
 
   .frame { max-width: none; margin: 0; border: 0; }
