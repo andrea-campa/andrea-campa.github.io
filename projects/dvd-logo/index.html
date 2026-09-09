@@ -2,22 +2,33 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DvdLogoSynth</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>DvdLogoSynth &middot; andrea campa</title>
+    <link rel="icon" href="../../assets/icon.ico">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <script src="../libraries/p5.min.js"></script>
     <script src="../libraries/common.js"></script>
   </head>
 
   <body>
 
-    <div id="arrow-nav">
-      <a href="../stripecam/" aria-label="Previous sketch" title="Previous sketch"><i class="fa-solid fa-chevron-left arrow"></i></a>
-      <a href="../../#3" aria-label="Back to portfolio" title="Back to portfolio"><i class="fa-solid fa-house arrow"></i></a>
-      <a href="../dotcam/" aria-label="Next sketch" title="Next sketch"><i class="fa-solid fa-chevron-right arrow"></i></a>
-    </div>
+    <header class="sk-bar">
+      <a class="sk-home" href="../../#coding">&larr; andrea campa / coding</a>
+      <span class="sk-count">p5.js &middot; 01 / 04</span>
+    </header>
+
     <div id="canvas-container"></div>
+
+    <footer class="sk-foot">
+      <a class="sk-prev" href="../stripecam/" rel="prev" aria-label="Previous sketch: stripecam">&larr; <span>stripecam</span></a>
+      <div class="sk-caption">
+        <h1>dvd logo synth</h1>
+        <p>click for sound, hold to fast-forward</p>
+      </div>
+      <a class="sk-next" href="../dotcam/" rel="next" aria-label="Next sketch: dotcam"><span>dotcam</span> &rarr;</a>
+    </footer>
+
     <script src="sketch.js"></script>
+    <script src="../libraries/nav.js"></script>
   </body>
 </html>

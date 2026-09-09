@@ -2,23 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StripeCam</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>StripeCam &middot; andrea campa</title>
+    <link rel="icon" href="../../assets/icon.ico">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <script src="../libraries/p5.min.js"></script>
     <script src="../libraries/common.js"></script>
   </head>
 
   <body>
 
-    <div id="arrow-nav">
-      <a href="../noiseballs/" aria-label="Previous sketch" title="Previous sketch"><i class="fa-solid fa-chevron-left arrow"></i></a>
-      <a href="../../#3" aria-label="Back to portfolio" title="Back to portfolio"><i class="fa-solid fa-house arrow"></i></a>
-      <a href="../dvd-logo/" aria-label="Next sketch" title="Next sketch"><i class="fa-solid fa-chevron-right arrow"></i></a>
-    </div>
-    <p id="cam-hint">Allow camera access to see this sketch.</p>
+    <header class="sk-bar">
+      <a class="sk-home" href="../../#coding">&larr; andrea campa / coding</a>
+      <span class="sk-count">p5.js &middot; 04 / 04</span>
+    </header>
+
+    <p id="cam-hint" hidden></p>
     <div id="canvas-container"></div>
+
+    <footer class="sk-foot">
+      <a class="sk-prev" href="../noiseballs/" rel="prev" aria-label="Previous sketch: noiseballs">&larr; <span>noiseballs</span></a>
+      <div class="sk-caption">
+        <h1>stripecam</h1>
+        <p>move to set stripes</p>
+      </div>
+      <a class="sk-next" href="../dvd-logo/" rel="next" aria-label="Next sketch: dvd logo synth"><span>dvd logo synth</span> &rarr;</a>
+    </footer>
+
     <script src="sketch.js"></script>
+    <script src="../libraries/nav.js"></script>
   </body>
 </html>
