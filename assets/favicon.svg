@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <!-- The reticle cursor on the page colour: four corner brackets around a square dot. -->
+  <rect width="16" height="16" fill="#1f1f1f"/>
+  <path fill="#f2f2f2" d="M2 2h3v1H3v2H2zM11 2h3v3h-1V3h-2zM2 11h1v2h2v1H2zM13 11h1v3h-3v-1h2zM6 6h4v4H6z"/>
+</svg>
