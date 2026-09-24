@@ -145,6 +145,8 @@
     current = i;
     sb.idx.textContent = pad(i + 1);
     sb.name.textContent = i < 0 ? 'index' : titles[i];
+    // Keep the URL in sync with scroll, so a refresh lands where you were.
+    history.replaceState(null, '', i < 0 ? location.pathname + location.search : '#' + sections[i].id);
     if (first) return;
     scramble(sb.name, { duration: 320 });
     sb.led.classList.remove('is-blink');
